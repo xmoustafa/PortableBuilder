@@ -8,8 +8,8 @@ namespace PortableBuilder
     /// </summary>
     internal static class UpdateConfig
     {
-        public const string Owner = "__GITHUB_OWNER__";
-        public const string Repo = "__GITHUB_REPO__";
+        public const string Owner = "xmoustafa";
+        public const string Repo = "PortableBuilder";
         public const string AssetName = "PortableBuilder.exe";
         public const string ShaAssetSuffix = ".sha256";
     }
