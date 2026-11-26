@@ -466,7 +466,7 @@ namespace PortableBuilder
             _chkAutoSave.Checked = false;
             _chkCleanPaths = MakeCheck("Clean paths (no D:/E:)");
             _chkCleanPaths.Checked = true;
-            _chkRobloxSetup = MakeCheck("Roblox Portable Setup (sharing + Enable_Sharing)");
+            _chkRobloxSetup = MakeCheck("Roblox + Studio Portable Setup (sharing + Enable_Sharing)");
             _chkRobloxSetup.Checked = true;
             _chkRobloxSetup.Enabled = false;
             _chkGameLoopSetup = MakeCheck("GameLoop Portable Setup (Apply/Remove + Snapshot/Temp)");
@@ -524,7 +524,7 @@ namespace PortableBuilder
                 "يخلّي الباكدج يستخدم %ProgramFiles%\\<App> بدل المسار ده.");
             AddTip(_chkRobloxSetup,
                 "بناء Roblox للمشاركة على الشبكة:\r\n" +
-                "Roblox.exe + Enable_Sharing.exe + Uninstall.exe.\r\n" +
+                "Roblox.exe + Roblox Studio.exe + Enable_Sharing.exe + Uninstall.exe.\r\n" +
                 "شيل العلامة لو عايز نسخة بورتابل عادية من غير شير.");
             AddTip(_chkGameLoopSetup,
                 "بناء GameLoop بالكامل: GameLoop.exe + PUBG Mobile.exe\r\n" +
@@ -952,8 +952,7 @@ namespace PortableBuilder
                 }));
             }
 
-            bool isRobloxApp = app.App != null &&
-                               string.Equals(app.App.id, "roblox", StringComparison.OrdinalIgnoreCase);
+            bool isRobloxApp = IsSelectedApp("roblox");
             bool isGameLoopApp = app.App != null &&
                                  string.Equals(app.App.id, "gameloop", StringComparison.OrdinalIgnoreCase);
             bool isFiveMApp = IsSelectedApp("fivem");
@@ -1054,6 +1053,12 @@ namespace PortableBuilder
             if (_current == null) return false;
             if (_current.App != null &&
                 string.Equals(_current.App.id, id, StringComparison.OrdinalIgnoreCase))
+                return true;
+
+            // Roblox Studio uses the same shared Versions/Modifications layout.
+            if (string.Equals(id, "roblox", StringComparison.OrdinalIgnoreCase) &&
+                _current.App != null &&
+                string.Equals(_current.App.id, "robloxstudio", StringComparison.OrdinalIgnoreCase))
                 return true;
 
             // Manual add / undetected folder: recognize FiveM by its only path.
@@ -1243,8 +1248,7 @@ namespace PortableBuilder
 
             bool isGameLoopApp = _current != null && _current.App != null &&
                                  string.Equals(_current.App.id, "gameloop", StringComparison.OrdinalIgnoreCase);
-            bool isRobloxApp = _current != null && _current.App != null &&
-                               string.Equals(_current.App.id, "roblox", StringComparison.OrdinalIgnoreCase);
+            bool isRobloxApp = IsSelectedApp("roblox");
             bool isFiveMApp = IsSelectedApp("fivem");
             bool gameLoopSetup = isGameLoopApp && _chkGameLoopSetup.Checked;
             bool robloxSetup = isRobloxApp && _chkRobloxSetup.Checked;
@@ -1302,6 +1306,7 @@ namespace PortableBuilder
                 ? _current.Name : Path.GetFileName(install.TrimEnd('\\'));
             request.AppId = _current != null && _current.App != null ? _current.App.id : "";
             if (fiveMSetup) request.AppId = "fivem";
+            if (robloxSetup) request.AppId = "roblox";
             request.InstallTarget = _current != null && _current.App != null ? _current.App.installTarget : "";
             request.InstallPath = install;
             request.ExePath = exe;
@@ -2202,9 +2207,13 @@ namespace PortableBuilder
 
             List<string> seen = new List<string>();
             List<string> candidates = new List<string>();
+            AddCandidate(candidates, seen, @"D:\TxGameAssistant");
             AddCandidate(candidates, seen, install);
             AddCandidate(candidates, seen, @"D:\Program Files\TxGameAssistant");
-            AddCandidate(candidates, seen, @"D:\TxGameAssistant");
+            AddCandidate(candidates, seen, @"C:\Program Files\TxGameAssistant");
+            AddCandidate(candidates, seen, @"C:\Program Files (x86)\TxGameAssistant");
+            AddCandidate(candidates, seen, @"C:\TxGameAssistant");
+            AddCandidate(candidates, seen, @"C:\TxGameAssistan");
             string pf = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
             if (!string.IsNullOrEmpty(pf))
                 AddCandidate(candidates, seen, Path.Combine(pf, "TxGameAssistant"));
@@ -2212,7 +2221,13 @@ namespace PortableBuilder
             if (!string.IsNullOrEmpty(pf86))
                 AddCandidate(candidates, seen, Path.Combine(pf86, "TxGameAssistant"));
 
-            int y = 22;
+            Panel sourceList = new Panel();
+            sourceList.SetBounds(10, 20, 650, 126);
+            sourceList.AutoScroll = true;
+            sourceList.BackColor = Color.Transparent;
+            sourceGroup.Controls.Add(sourceList);
+
+            int y = 0;
             bool selected = false;
             foreach (string candidate in candidates)
             {
@@ -2221,7 +2236,7 @@ namespace PortableBuilder
                 radio.Text = candidate + (valid ? "" : "   (no UI\\AndroidEmulatorEn.exe)");
                 radio.Enabled = valid;
                 radio.Tag = candidate;
-                radio.SetBounds(14, y, 640, 20);
+                radio.SetBounds(2, y, 620, 20);
                 radio.CheckedChanged += delegate
                 {
                     RadioButton rb = (RadioButton)radio;
@@ -2231,7 +2246,7 @@ namespace PortableBuilder
                         UpdateStatus();
                     }
                 };
-                sourceGroup.Controls.Add(radio);
+                sourceList.Controls.Add(radio);
                 _candidates.Add(radio);
                 y += 22;
                 if (valid && !selected && SamePath(candidate, ResolveRoot(install)))
@@ -2291,7 +2306,7 @@ namespace PortableBuilder
 
             _txtTarget = new TextBox();
             _txtTarget.SetBounds(66, 24, 470, 24);
-            _txtTarget.Text = string.IsNullOrEmpty(output) ? @"D:\TxGameAssistant" : output;
+            _txtTarget.Text = @"D:\TxGameAssistant";
             targetGroup.Controls.Add(_txtTarget);
 
             Button browseTarget = new Button();
@@ -2416,10 +2431,10 @@ namespace PortableBuilder
 
         private string builtSource(string install, List<string> candidates)
         {
-            string resolved = ResolveRoot(install);
-            if (resolved != null) return resolved;
             foreach (string candidate in candidates)
                 if (IsGameLoop(candidate)) return candidate;
+            string resolved = ResolveRoot(install);
+            if (resolved != null) return resolved;
             return install ?? "";
         }
 

@@ -136,7 +136,7 @@ namespace RobloxPortable
                 if (mode == "prepare") return PrepareMode();
                 if (mode == "share") return ShareMode(ini);
                 if (mode == "uninstall") return UninstallMode(ini, deleteDataArg);
-                return RunMode(ini, noWait);
+                return RunMode(ini, noWait, ini.GetBool("App", "Studio", false));
             }
             catch (Exception ex)
             {
@@ -176,7 +176,7 @@ namespace RobloxPortable
         //  run
         // ------------------------------------------------------------------
 
-        private static int RunMode(IniFile ini, bool noWait)
+        private static int RunMode(IniFile ini, bool noWait, bool studio)
         {
             if (!AcquireMutex())
             {
@@ -233,14 +233,15 @@ namespace RobloxPortable
 
             string versionDir;
             string exe;
-            if (!FindLatestVersion(out versionDir, out exe))
+            if (!FindLatestVersion(studio, out versionDir, out exe))
             {
-                Fail("Roblox client not found.\r\n\r\nExpected:\r\n" + Path.Combine(_root, "Versions", "version-*", "RobloxPlayerBeta.exe") +
+                Fail((studio ? "Roblox Studio client" : "Roblox client") + " not found.\r\n\r\nExpected:\r\n" +
+                     Path.Combine(_root, "Versions", "version-*", studio ? "RobloxStudioBeta.exe" : "RobloxPlayerBeta.exe") +
                      "\r\n\r\nRun Enable_Sharing.exe to copy the game files to the share.");
                 return 9;
             }
 
-            UpdateRegistry(versionDir, exe);
+            if (!studio) UpdateRegistry(versionDir, exe);
 
             string arguments = BuildGameArguments();
             Log("Launching: " + exe + (arguments.Length == 0 ? "" : " " + arguments));
@@ -426,8 +427,8 @@ namespace RobloxPortable
                 string info = "Sharing is ready.\r\n\r\n" +
                               "Share: " + root + "\r\n" +
                               "Device: " + _device + "\r\n\r\n" +
-                              "Run Roblox.exe on this PC to play. Other PCs on the network run\r\n" +
-                              "Enable_Sharing.exe once, then Roblox.exe.\r\n\r\n" +
+                              "Run Roblox.exe or Roblox Studio.exe on this PC. Other PCs on the network run\r\n" +
+                              "Enable_Sharing.exe once, then Roblox.exe / Roblox Studio.exe.\r\n\r\n" +
                               "Log: " + LogPathForDisplay();
                 MessageBox.Show(info, "Roblox Portable - Enable Sharing",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -915,7 +916,7 @@ namespace RobloxPortable
             if (!_silent)
             {
                 MessageBox.Show("Uninstall finished.\r\n\r\nLinks removed: " + removed +
-                    "\r\n\r\nRoblox.exe and Enable_Sharing.exe were left in place.",
+                    "\r\n\r\nRoblox.exe, Roblox Studio.exe and Enable_Sharing.exe were left in place.",
                     "Roblox Portable - Uninstall", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             return 0;
@@ -1416,7 +1417,7 @@ namespace RobloxPortable
 
                 if (Directory.Exists(source))
                 {
-                    if (!HasUsableVersion(target))
+                    if (!HasAnyUsableVersion(target))
                     {
                         if (Directory.Exists(target) && Directory.GetFileSystemEntries(target).Length > 0)
                         {
@@ -1450,6 +1451,16 @@ namespace RobloxPortable
                         // The share already has usable versions; Roblox updates
                         // them itself. Never push an older local copy over them.
                         Log("Versions already present on the share; left untouched.");
+                        if (!HasUsableVersion(target, false))
+                        {
+                            if (progress != null) progress("Adding Roblox Player files from the package...");
+                            EnsureClientFiles(source, target, false);
+                        }
+                        if (!HasUsableVersion(target, true))
+                        {
+                            if (progress != null) progress("Adding Roblox Studio files from the package...");
+                            EnsureClientFiles(source, target, true);
+                        }
                     }
                 }
 
@@ -1504,12 +1515,22 @@ namespace RobloxPortable
 
         private static bool HasUsableVersion(string versionsDir)
         {
+            return HasUsableVersion(versionsDir, false);
+        }
+
+        private static bool HasAnyUsableVersion(string versionsDir)
+        {
+            return HasUsableVersion(versionsDir, false) || HasUsableVersion(versionsDir, true);
+        }
+
+        private static bool HasUsableVersion(string versionsDir, bool studio)
+        {
             if (!Directory.Exists(versionsDir)) return false;
             try
             {
                 foreach (string dir in Directory.GetDirectories(versionsDir, "version-*"))
                 {
-                    string exe = FindPlayerExe(dir);
+                    string exe = studio ? FindStudioExe(dir) : FindPlayerExe(dir);
                     if (string.IsNullOrEmpty(exe)) continue;
                     try
                     {
@@ -1520,6 +1541,33 @@ namespace RobloxPortable
             }
             catch { }
             return false;
+        }
+
+        // Adds only the missing client kind (Player or Studio) from the package
+        // seed into an existing share, without overwriting newer share files.
+        private static void EnsureClientFiles(string sourceVersions, string targetVersions, bool studio)
+        {
+            if (!Directory.Exists(sourceVersions)) return;
+            try
+            {
+                foreach (string sourceDir in Directory.GetDirectories(sourceVersions, "version-*"))
+                {
+                    string exe = studio ? FindStudioExe(sourceDir) : FindPlayerExe(sourceDir);
+                    if (string.IsNullOrEmpty(exe)) continue;
+
+                    string targetDir = Path.Combine(targetVersions, Path.GetFileName(sourceDir));
+                    string targetExe = studio ? FindStudioExe(targetDir) : FindPlayerExe(targetDir);
+                    if (!string.IsNullOrEmpty(targetExe)) continue;
+
+                    Log("Adding missing " + (studio ? "Studio" : "Player") +
+                        " files: " + Path.GetFileName(sourceDir));
+                    CopyMissing(sourceDir, targetDir, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log("Could not add missing Roblox client files: " + ex.Message);
+            }
         }
 
         private static void CopyTree(string source, string target, Action<string> progress, out int failed)
@@ -1547,7 +1595,7 @@ namespace RobloxPortable
             }
         }
 
-        private static bool FindLatestVersion(out string versionDir, out string exe)
+        private static bool FindLatestVersion(bool studio, out string versionDir, out string exe)
         {
             versionDir = null;
             exe = null;
@@ -1561,7 +1609,7 @@ namespace RobloxPortable
             roots.Add(shareVersions);
             // The share copy is canonical for updates; only look at the local
             // seed when the share has no usable client yet.
-            if (!HasUsableVersion(shareVersions)) roots.Add(baseVersions);
+            if (!HasUsableVersion(shareVersions, studio)) roots.Add(baseVersions);
 
             foreach (string versions in roots)
             {
@@ -1569,10 +1617,9 @@ namespace RobloxPortable
                 foreach (string dir in Directory.GetDirectories(versions, "version-*"))
                 {
                     string folder = Path.GetFileName(dir);
-                    if (!seen.Add(folder)) continue;
-
-                    string candidate = FindPlayerExe(dir);
+                    string candidate = studio ? FindStudioExe(dir) : FindPlayerExe(dir);
                     if (string.IsNullOrEmpty(candidate)) continue;
+                    if (!seen.Add(folder)) continue;
                     try
                     {
                         if (new FileInfo(candidate).Length <= 0) continue;
@@ -1600,11 +1647,11 @@ namespace RobloxPortable
 
             if (!string.IsNullOrEmpty(exe)) return true;
 
-            // Last resort: a flat package that keeps RobloxPlayerBeta.exe at the root.
+            // Last resort: a flat package that keeps the client EXE at the root.
             foreach (string dir in new string[] { _root, _baseDir })
             {
                 if (string.IsNullOrEmpty(dir) || !Directory.Exists(dir)) continue;
-                string candidate = FindPlayerExe(dir);
+                string candidate = studio ? FindStudioExe(dir) : FindPlayerExe(dir);
                 if (!string.IsNullOrEmpty(candidate))
                 {
                     try { if (new FileInfo(candidate).Length <= 0) continue; } catch { continue; }
@@ -1627,6 +1674,27 @@ namespace RobloxPortable
             try
             {
                 foreach (string file in Directory.GetFiles(dir, "Roblox*.exe"))
+                {
+                    string name = Path.GetFileName(file).ToLowerInvariant();
+                    if (name.Contains("uninstall") || name.Contains("setup") || name.Contains("studio")) continue;
+                    return file;
+                }
+            }
+            catch { }
+            return null;
+        }
+
+        private static string FindStudioExe(string dir)
+        {
+            string[] names = { "RobloxStudioBeta.exe", "RobloxStudioLauncherBeta.exe" };
+            foreach (string name in names)
+            {
+                string path = Path.Combine(dir, name);
+                if (File.Exists(path)) return path;
+            }
+            try
+            {
+                foreach (string file in Directory.GetFiles(dir, "RobloxStudio*.exe"))
                 {
                     string name = Path.GetFileName(file).ToLowerInvariant();
                     if (name.Contains("uninstall") || name.Contains("setup")) continue;

@@ -65,6 +65,7 @@ echo Building GUI...
   /win32manifest:app.manifest ^
   /resource:apps.json,PortableBuilder.apps.json ^
   /resource:app.ico,PortableBuilder.app.ico ^
+  /resource:PUBGM.ico,PortableBuilder.PUBGM.ico ^
   /resource:PortableLauncher\Program.cs,PortableBuilder.LauncherProgram.cs ^
   /resource:PortableLauncher\PortableLauncher.exe,PortableBuilder.PortableLauncher.exe ^
   /resource:RobloxLauncher\RobloxLauncher.exe,PortableBuilder.RobloxLauncher.exe ^

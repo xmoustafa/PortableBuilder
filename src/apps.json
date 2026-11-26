@@ -4136,11 +4136,14 @@
       ],
       "installPaths": [
         "%LOCALAPPDATA%\\Roblox",
-        "%ProgramFiles(x86)%\\Roblox"
+        "%ProgramFiles(x86)%\\Roblox",
+        "%ProgramFiles%\\Roblox"
       ],
       "exe": "RobloxStudioBeta.exe",
       "dataPaths": [
-        "%LOCALAPPDATA%\\Roblox"
+        "%LOCALAPPDATA%\\Roblox",
+        "%APPDATA%\\Roblox",
+        "%USERPROFILE%\\Roblox"
       ],
       "registryKeys": [
         "HKCU\\Software\\Roblox"
