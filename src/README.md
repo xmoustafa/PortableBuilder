@@ -367,8 +367,11 @@ sign.cmd portablebuilder-test.pfx test
    PortableBuilder.exe
    PortableBuilder.exe.sha256
    ```
-5. أي تحديث بعد كده: اعمل tag جديد أعلى من الحالي:
+5. أي تحديث بعد كده: ارفع تعديلاتك على `main` الأول، وبعدها اعمل tag جديد أعلى من الحالي:
    ```bat
+   git add .
+   git commit -m "Update"
+   git push origin main
    git tag v1.1.1
    git push origin v1.1.1
    ```
