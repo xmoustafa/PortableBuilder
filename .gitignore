@@ -9,3 +9,14 @@ diagnostics/
 .vs/
 bin/
 obj/
+
+# Never commit signing material, secrets, or runtime logs
+*.pfx
+*.p12
+*.snk
+*.pem
+*.key
+*.crt
+*.cer
+.env
+*.log

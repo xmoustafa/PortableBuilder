@@ -1,10 +1,15 @@
 param(
     [string]$Subject = "CN=PortableBuilder",
     [string]$OutPfx = "portablebuilder-test.pfx",
-    [string]$Password = "test"
+    [string]$Password = ""
 )
 
 $ErrorActionPreference = "Stop"
+
+if ([string]::IsNullOrEmpty($Password)) {
+    $Password = [Guid]::NewGuid().ToString("N").Substring(0, 20)
+    Write-Host ("[i] Generated certificate password: {0}" -f $Password)
+}
 
 $cert = New-SelfSignedCertificate `
     -Type CodeSigningCert `

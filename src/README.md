@@ -334,8 +334,8 @@ build.cmd
 ```bat
 :: شهادة تجريبية (self-signed) للاختبار المحلي:
 powershell -ExecutionPolicy Bypass -File make-cert.ps1
-:: التوقيع:
-sign.cmd portablebuilder-test.pfx test
+:: هيطبع Generated certificate password — استخدمه في التوقيع:
+sign.cmd portablebuilder-test.pfx <PASSWORD>
 ```
 
 - `sign.cmd <cert.pfx> <password>` بيوقّع `PortableBuilder.exe` بـ signtool + timestamp.
