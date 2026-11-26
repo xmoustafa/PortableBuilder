@@ -1,0 +1,87 @@
+name: Release PortableBuilder
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read version from tag
+        id: version
+        shell: pwsh
+        run: |
+          $tag = "${{ github.ref_name }}"
+          $ver = $tag.TrimStart('v')
+          if ($ver -notmatch '^\d+\.\d+\.\d+') {
+            throw "Release tag must look like v1.2.3 (got: $tag)"
+          }
+          $parts = @($ver.Split('.'))
+          while ($parts.Count -lt 4) { $parts += "0" }
+          $asm = ($parts[0..3] -join ".")
+          $info = ($parts[0..2] -join ".")
+          "asm=$asm" >> $env:GITHUB_OUTPUT
+          "info=$info" >> $env:GITHUB_OUTPUT
+          "tag=$tag" >> $env:GITHUB_OUTPUT
+
+      - name: Patch assembly versions
+        shell: pwsh
+        run: |
+          $asm = "${{ steps.version.outputs.asm }}"
+          $info = "${{ steps.version.outputs.info }}"
+          Get-ChildItem src -Recurse -Filter AssemblyInfo.cs | ForEach-Object {
+            $text = Get-Content $_.FullName -Raw
+            $text = $text -replace 'AssemblyVersion\("[^"]+"\)', "AssemblyVersion(`"$asm`")"
+            $text = $text -replace 'AssemblyFileVersion\("[^"]+"\)', "AssemblyFileVersion(`"$asm`")"
+            $text = $text -replace 'AssemblyInformationalVersion\("[^"]+"\)', "AssemblyInformationalVersion(`"$info`")"
+            Set-Content $_.FullName $text -Encoding UTF8
+          }
+
+      - name: Inject repository owner/name into updater config
+        shell: pwsh
+        run: |
+          $repo = "${{ github.repository }}".Split('/')
+          $owner = $repo[0]
+          $name = $repo[1]
+          $cfg = @"
+          namespace PortableBuilder
+          {
+              internal static class UpdateConfig
+              {
+                  public const string Owner = "$owner";
+                  public const string Repo = "$name";
+                  public const string AssetName = "PortableBuilder.exe";
+                  public const string ShaAssetSuffix = ".sha256";
+              }
+          }
+          "@
+          Set-Content src/UpdateConfig.cs $cfg -Encoding UTF8
+
+      - name: Build
+        shell: cmd
+        run: src\build.cmd
+
+      - name: Create SHA-256 checksum
+        shell: pwsh
+        run: |
+          $hash = (Get-FileHash PortableBuilder.exe -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  PortableBuilder.exe" | Set-Content PortableBuilder.exe.sha256 -Encoding ASCII
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: PortableBuilder ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            PortableBuilder.exe
+            PortableBuilder.exe.sha256

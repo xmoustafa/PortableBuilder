@@ -1,0 +1,11 @@
+# Build output (releases are produced by GitHub Actions)
+PortableBuilder.exe
+PortableBuilder.exe.sha256
+src/*/*.exe
+src/*/*.pdb
+diagnostics/
+*.user
+*.suo
+.vs/
+bin/
+obj/

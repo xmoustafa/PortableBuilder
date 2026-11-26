@@ -1,0 +1,7310 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "id": "steam",
+      "name": "Steam",
+      "category": "Game Launcher",
+      "publisher": "Valve",
+      "aliases": [
+        "Valve Steam"
+      ],
+      "tokens": [
+        "steam",
+        "valve"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Steam",
+        "%ProgramFiles%\\Steam"
+      ],
+      "exe": "steam.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Steam",
+        "%APPDATA%\\Steam",
+        "%ProgramFiles(x86)%\\Common Files\\Steam",
+        "%ProgramFiles%\\Common Files\\Steam",
+        "%PROGRAMDATA%\\Steam",
+        "%CommonProgramFiles(x86)%\\Steam"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Valve\\Steam",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Valve\\Steam"
+      ],
+      "processNames": [
+        "steam"
+      ],
+      "args": "",
+      "notes": "steamapps (games + userdata saves) are excluded by default; config/login is included. Games with Steam DRM still need Steam online.",
+      "excludes": [
+        "steamapps",
+        "logs",
+        "dumps",
+        "depotcache"
+      ],
+      "installTarget": "%ProgramFiles(x86)%\\Steam"
+    },
+    {
+      "id": "epic",
+      "name": "Epic Games Launcher",
+      "category": "Game Launcher",
+      "publisher": "Epic Games",
+      "aliases": [
+        "Epic Games"
+      ],
+      "tokens": [
+        "epic",
+        "epicgames"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Epic Games\\Launcher",
+        "%ProgramFiles%\\Epic Games\\Launcher",
+        "%ProgramFiles%\\Epic Games",
+        "%ProgramFiles(x86)%\\Epic Games",
+        "%ProgramFiles(x86)%\\Epic Games\\Epic Online Services"
+      ],
+      "exe": "EpicGamesLauncher.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\EpicGamesLauncher",
+        "%ProgramData%\\Epic",
+        "%LOCALAPPDATA%\\Epic Games",
+        "%LOCALAPPDATA%\\EpicOnlineServicesUIHelper",
+        "%LOCALAPPDATA%\\FortniteGame",
+        "%PROGRAMDATA%\\Epic",
+        "%APPDATA%\\MarvelRivals_Launcher"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Epic Games",
+        "HKLM\\SOFTWARE\\WOW6432Node\\EpicGames"
+      ],
+      "processNames": [
+        "EpicGamesLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "battlenet",
+      "name": "Battle.net",
+      "category": "Game Launcher",
+      "publisher": "Blizzard",
+      "aliases": [
+        "Blizzard Battle.net",
+        "Blizzard"
+      ],
+      "tokens": [
+        "battlenet",
+        "blizzard"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Battle.net",
+        "%ProgramFiles%\\Battle.net"
+      ],
+      "exe": "Battle.net.exe",
+      "dataPaths": [
+        "%APPDATA%\\Battle.net",
+        "%LOCALAPPDATA%\\Battle.net",
+        "%ProgramData%\\Battle.net",
+        "%LOCALAPPDATA%\\Activision",
+        "%LOCALAPPDATA%\\Blizzard Entertainment"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Blizzard Entertainment",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Blizzard Entertainment"
+      ],
+      "processNames": [
+        "Battle.net"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "riot",
+      "name": "Riot Client",
+      "category": "Game Launcher",
+      "publisher": "Riot Games",
+      "aliases": [
+        "Riot Games",
+        "League of Legends",
+        "VALORANT"
+      ],
+      "tokens": [
+        "riot",
+        "valorant",
+        "leagueoflegends"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Riot Games\\Riot Client",
+        "%ProgramFiles(x86)%\\Riot Games\\Riot Client"
+      ],
+      "exe": "RiotClientServices.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Riot Games",
+        "%APPDATA%\\Riot Games",
+        "%ProgramData%\\Riot Games",
+        "%APPDATA%\\Riot Client",
+        "%APPDATA%\\riot-client-ux",
+        "%PROGRAMDATA%\\Riot Games",
+        "%LOCALAPPDATA%\\VALORANT"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Riot Games",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Riot Games"
+      ],
+      "processNames": [
+        "RiotClientServices"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "rockstar",
+      "name": "Rockstar Games Launcher",
+      "category": "Game Launcher",
+      "publisher": "Rockstar Games",
+      "aliases": [
+        "Rockstar"
+      ],
+      "tokens": [
+        "rockstar",
+        "rockstargames"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Rockstar Games\\Launcher",
+        "%ProgramFiles(x86)%\\Rockstar Games\\Launcher"
+      ],
+      "exe": "RockstarGameLauncher.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Rockstar Games",
+        "%APPDATA%\\Rockstar Games",
+        "%ProgramData%\\Rockstar Games",
+        "%PROGRAMDATA%\\Rockstar Games"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Rockstar Games",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Rockstar Games"
+      ],
+      "processNames": [
+        "RockstarGameLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "ubisoft",
+      "name": "Ubisoft Connect",
+      "category": "Game Launcher",
+      "publisher": "Ubisoft",
+      "aliases": [
+        "Uplay",
+        "Ubisoft Game Launcher"
+      ],
+      "tokens": [
+        "ubisoft",
+        "uplay"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Ubisoft\\Ubisoft Game Launcher",
+        "%ProgramFiles%\\Ubisoft\\Ubisoft Game Launcher"
+      ],
+      "exe": "UbisoftConnect.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Ubisoft Game Launcher",
+        "%APPDATA%\\Ubisoft",
+        "%ProgramData%\\Ubisoft"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Ubisoft",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Ubisoft"
+      ],
+      "processNames": [
+        "UbisoftConnect"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "eaapp",
+      "name": "EA app",
+      "category": "Game Launcher",
+      "publisher": "Electronic Arts",
+      "aliases": [
+        "Electronic Arts",
+        "EA Desktop"
+      ],
+      "tokens": [
+        "electronicarts",
+        "eadesktop",
+        "eaapp"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Electronic Arts\\EA Desktop",
+        "%ProgramFiles(x86)%\\Electronic Arts\\EA Desktop"
+      ],
+      "exe": "EA Desktop.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Electronic Arts\\EA Desktop",
+        "%APPDATA%\\Electronic Arts",
+        "%ProgramData%\\Electronic Arts",
+        "%LOCALAPPDATA%\\EADesktop",
+        "%LOCALAPPDATA%\\EALaunchHelper",
+        "%LOCALAPPDATA%\\Battlefield 6\\cache",
+        "%USERPROFILE%\\Documents\\Battlefield 6"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Electronic Arts",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Electronic Arts"
+      ],
+      "processNames": [
+        "EADesktop"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "origin",
+      "name": "Origin",
+      "category": "Game Launcher",
+      "publisher": "Electronic Arts",
+      "aliases": [
+        "EA Origin"
+      ],
+      "tokens": [
+        "origin",
+        "electronicarts"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Origin",
+        "%ProgramFiles%\\Origin"
+      ],
+      "exe": "Origin.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Origin",
+        "%APPDATA%\\Origin",
+        "%ProgramData%\\Origin"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Origin",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Origin"
+      ],
+      "processNames": [
+        "Origin"
+      ],
+      "args": "",
+      "notes": "Legacy client.",
+      "excludes": []
+    },
+    {
+      "id": "gog",
+      "name": "GOG Galaxy",
+      "category": "Game Launcher",
+      "publisher": "GOG",
+      "aliases": [
+        "GOG.com"
+      ],
+      "tokens": [
+        "gog",
+        "goggalaxy"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\GOG Galaxy",
+        "%ProgramFiles%\\GOG Galaxy"
+      ],
+      "exe": "GalaxyClient.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\GOG.com",
+        "%APPDATA%\\GOG.com",
+        "%ProgramData%\\GOG.com"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\GOG.com",
+        "HKLM\\SOFTWARE\\WOW6432Node\\GOG.com"
+      ],
+      "processNames": [
+        "GalaxyClient"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon Games",
+      "category": "Game Launcher",
+      "publisher": "Amazon",
+      "aliases": [
+        "Amazon Games App"
+      ],
+      "tokens": [
+        "amazongames"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Amazon Games",
+        "%ProgramFiles(x86)%\\Amazon Games"
+      ],
+      "exe": "Amazon Games.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Amazon Games",
+        "%APPDATA%\\Amazon Games"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Amazon"
+      ],
+      "processNames": [
+        "Amazon Games"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "bethesda",
+      "name": "Bethesda.net Launcher",
+      "category": "Game Launcher",
+      "publisher": "Bethesda",
+      "aliases": [
+        "Bethesda"
+      ],
+      "tokens": [
+        "bethesda"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Bethesda.net Launcher",
+        "%ProgramFiles%\\Bethesda.net Launcher"
+      ],
+      "exe": "BethesdaNetLauncher.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Bethesda.net Launcher",
+        "%APPDATA%\\Bethesda.net Launcher"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Bethesda Softworks"
+      ],
+      "processNames": [
+        "BethesdaNetLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "paradox",
+      "name": "Paradox Launcher",
+      "category": "Game Launcher",
+      "publisher": "Paradox Interactive",
+      "aliases": [
+        "Paradox Interactive"
+      ],
+      "tokens": [
+        "paradox"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Paradox Interactive\\Paradox Launcher",
+        "%ProgramFiles%\\Paradox Interactive\\Paradox Launcher"
+      ],
+      "exe": "Paradox Launcher.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Paradox Interactive",
+        "%APPDATA%\\Paradox Interactive"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Paradox Interactive"
+      ],
+      "processNames": [
+        "Paradox Launcher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "wargaming",
+      "name": "Wargaming Game Center",
+      "category": "Game Launcher",
+      "publisher": "Wargaming",
+      "aliases": [
+        "WGC",
+        "World of Tanks"
+      ],
+      "tokens": [
+        "wargaming",
+        "gamecenter"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Wargaming.net\\GameCenter",
+        "%ProgramFiles%\\Wargaming.net\\GameCenter"
+      ],
+      "exe": "WGC.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Wargaming.net",
+        "%APPDATA%\\Wargaming.net"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Wargaming.net"
+      ],
+      "processNames": [
+        "WGC"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "arc",
+      "name": "Perfect World Arc",
+      "category": "Game Launcher",
+      "publisher": "Perfect World",
+      "aliases": [
+        "ARC"
+      ],
+      "tokens": [
+        "perfectworld",
+        "arcgames"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Perfect World Arc",
+        "%ProgramFiles(x86)%\\Perfect World Arc"
+      ],
+      "exe": "Arc.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Arc",
+        "%APPDATA%\\Arc"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Perfect World"
+      ],
+      "processNames": [
+        "Arc"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "purple",
+      "name": "NCSOFT Purple",
+      "category": "Game Launcher",
+      "publisher": "NCSOFT",
+      "aliases": [
+        "Purple"
+      ],
+      "tokens": [
+        "ncsoft",
+        "purple"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\NCSOFT\\Purple",
+        "%ProgramFiles(x86)%\\NCSOFT\\Purple"
+      ],
+      "exe": "Purple.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\NCSOFT",
+        "%APPDATA%\\NCSOFT"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\NCSOFT"
+      ],
+      "processNames": [
+        "Purple"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "nexon",
+      "name": "Nexon Launcher",
+      "category": "Game Launcher",
+      "publisher": "Nexon",
+      "aliases": [
+        "Nexon"
+      ],
+      "tokens": [
+        "nexon"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Nexon\\Nexon Launcher",
+        "%ProgramFiles(x86)%\\Nexon\\Nexon Launcher"
+      ],
+      "exe": "NexonLauncher.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Nexon",
+        "%APPDATA%\\Nexon"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Nexon"
+      ],
+      "processNames": [
+        "NexonLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "garena",
+      "name": "Garena",
+      "category": "Game Launcher",
+      "publisher": "Garena",
+      "aliases": [
+        "Garena+"
+      ],
+      "tokens": [
+        "garena"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Garena\\Garena+",
+        "%ProgramFiles(x86)%\\Garena\\Garena+"
+      ],
+      "exe": "Garena.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Garena",
+        "%APPDATA%\\Garena"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Garena"
+      ],
+      "processNames": [
+        "Garena"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "hoyoplay",
+      "name": "HoYoPlay",
+      "category": "Game Launcher",
+      "publisher": "HoYoverse",
+      "aliases": [
+        "HoYoverse",
+        "Genshin Impact",
+        "Honkai Star Rail"
+      ],
+      "tokens": [
+        "hoyoplay",
+        "hoyoverse",
+        "mihoyo"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\HoYoPlay",
+        "%ProgramFiles(x86)%\\HoYoPlay"
+      ],
+      "exe": "HoYoPlay.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\HoYoPlay",
+        "%APPDATA%\\HoYoPlay",
+        "%LOCALAPPDATA%\\HoYoverse"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\HoYoPlay",
+        "HKCU\\Software\\miHoYo"
+      ],
+      "processNames": [
+        "HoYoPlay"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": [
+        "games",
+        "Genshin Impact",
+        "ZenlessZoneZero"
+      ]
+    },
+    {
+      "id": "wegame",
+      "name": "WeGame",
+      "category": "Game Launcher",
+      "publisher": "Tencent",
+      "aliases": [
+        "Tencent WeGame"
+      ],
+      "tokens": [
+        "wegame",
+        "tencent"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Tencent\\WeGame",
+        "%ProgramFiles%\\Tencent\\WeGame"
+      ],
+      "exe": "WeGame.exe",
+      "dataPaths": [
+        "%APPDATA%\\Tencent\\WeGame",
+        "%LOCALAPPDATA%\\Tencent"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Tencent\\WeGame"
+      ],
+      "processNames": [
+        "WeGame"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "vkplay",
+      "name": "VK Play",
+      "category": "Game Launcher",
+      "publisher": "VK",
+      "aliases": [
+        "VK Play Games"
+      ],
+      "tokens": [
+        "vkplay"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\VK Play",
+        "%ProgramFiles(x86)%\\VK Play"
+      ],
+      "exe": "VKPlay.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\VKPlay",
+        "%APPDATA%\\VKPlay"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\VK"
+      ],
+      "processNames": [
+        "VKPlay"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "itch",
+      "name": "itch.io",
+      "category": "Game Launcher",
+      "publisher": "itch.io",
+      "aliases": [
+        "itch"
+      ],
+      "tokens": [
+        "itch"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\itch"
+      ],
+      "exe": "itch.exe",
+      "dataPaths": [
+        "%APPDATA%\\itch",
+        "%LOCALAPPDATA%\\itch"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\itch"
+      ],
+      "processNames": [
+        "itch"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "playnite",
+      "name": "Playnite",
+      "category": "Game Launcher",
+      "publisher": "Playnite",
+      "aliases": [
+        "Playnite"
+      ],
+      "tokens": [
+        "playnite"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Playnite"
+      ],
+      "exe": "Playnite.DesktopApp.exe",
+      "dataPaths": [
+        "%APPDATA%\\Playnite",
+        "%LOCALAPPDATA%\\Playnite"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Playnite.DesktopApp"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "hydra",
+      "name": "Hydra",
+      "category": "Game Launcher",
+      "publisher": "Hydra",
+      "aliases": [
+        "Hydra Launcher"
+      ],
+      "tokens": [
+        "hydra"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Hydra"
+      ],
+      "exe": "Hydra.exe",
+      "dataPaths": [
+        "%APPDATA%\\Hydra",
+        "%LOCALAPPDATA%\\Hydra"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Hydra"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gameloop",
+      "name": "GameLoop",
+      "category": "Android Emulator",
+      "publisher": "Tencent",
+      "aliases": [
+        "Tencent Gaming Buddy",
+        "TxGameAssistant",
+        "PUBG Mobile Emulator"
+      ],
+      "tokens": [
+        "gameloop",
+        "txgameassistant",
+        "tencent"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\TxGameAssistant",
+        "%ProgramFiles(x86)%\\TxGameAssistant"
+      ],
+      "exe": "AppMarket.exe",
+      "dataPaths": [
+        "%ProgramData%\\Tencent\\TxGameAssistant",
+        "%ProgramData%\\Tencent",
+        "%LOCALAPPDATA%\\Tencent",
+        "%APPDATA%\\Tencent",
+        "%LOCALAPPDATA%\\Tencent\\TxGameAssistant",
+        "%LOCALAPPDATA%\\Tencent\\QQGuild",
+        "%PROGRAMDATA%\\Tencent\\qimei",
+        "%PROGRAMDATA%\\Tencent\\QQPCMgr",
+        "%PROGRAMDATA%\\Tencent\\TxGameAssistant",
+        "%APPDATA%\\Tencent\\MobileGamePC",
+        "%APPDATA%\\Tencent\\Androws"
+      ],
+      "registryKeys": [
+        "HKLM\\SOFTWARE\\WOW6432Node\\Tencent",
+        "HKCU\\SOFTWARE\\Tencent",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MobileGamePC"
+      ],
+      "processNames": [
+        "AppMarket",
+        "AndroidEmulatorEn",
+        "AndroidEmulator"
+      ],
+      "args": "",
+      "notes": "GameLoop/PUBG: imports the Tencent registry and creates PUBG Mobile.exe if UI\\AndroidEmulatorEn.exe exists.",
+      "excludes": [],
+      "registryReplace": []
+    },
+    {
+      "id": "bluestacks",
+      "name": "BlueStacks 5",
+      "category": "Android Emulator",
+      "publisher": "BlueStacks",
+      "aliases": [
+        "BlueStacks"
+      ],
+      "tokens": [
+        "bluestacks"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\BlueStacks_nxt",
+        "%ProgramFiles(x86)%\\BlueStacks_nxt"
+      ],
+      "exe": "HD-Player.exe",
+      "dataPaths": [
+        "%ProgramData%\\BlueStacks_nxt",
+        "%LOCALAPPDATA%\\BlueStacks_nxt"
+      ],
+      "registryKeys": [
+        "HKLM\\SOFTWARE\\BlueStacks_nxt"
+      ],
+      "processNames": [
+        "HD-Player"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "ldplayer",
+      "name": "LDPlayer",
+      "category": "Android Emulator",
+      "publisher": "XUANZHI",
+      "aliases": [
+        "LDPlayer9"
+      ],
+      "tokens": [
+        "ldplayer"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\LDPlayer\\LDPlayer9",
+        "%ProgramFiles(x86)%\\LDPlayer\\LDPlayer9"
+      ],
+      "exe": "dnplayer.exe",
+      "dataPaths": [
+        "%APPDATA%\\LDPlayer",
+        "%LOCALAPPDATA%\\LDPlayer"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\XuanZhi\\LDPlayer64",
+        "HKCU\\Software\\XuanZhi\\LDPlayer9",
+        "HKLM\\SOFTWARE\\WOW6432Node\\XuanZhi\\LDPlayer9",
+        "HKLM\\SOFTWARE\\WOW6432Node\\XuanZhi\\LDPlayer64"
+      ],
+      "processNames": [
+        "dnplayer"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "memu",
+      "name": "MEmu",
+      "category": "Android Emulator",
+      "publisher": "Microvirt",
+      "aliases": [
+        "MEmu Play"
+      ],
+      "tokens": [
+        "memu",
+        "microvirt"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Microvirt\\MEmu",
+        "%ProgramFiles(x86)%\\Microvirt\\MEmu"
+      ],
+      "exe": "MEmu.exe",
+      "dataPaths": [
+        "%APPDATA%\\Microvirt",
+        "%LOCALAPPDATA%\\Microvirt",
+        "%LOCALAPPDATA%\\Microvirt\\memu",
+        "%LOCALAPPDATA%\\MEmu"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "MEmu"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "nox",
+      "name": "NoxPlayer",
+      "category": "Android Emulator",
+      "publisher": "Nox",
+      "aliases": [
+        "Nox"
+      ],
+      "tokens": [
+        "nox",
+        "bignox"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Nox\\bin",
+        "%ProgramFiles%\\Nox\\bin"
+      ],
+      "exe": "Nox.exe",
+      "dataPaths": [
+        "%APPDATA%\\Nox",
+        "%LOCALAPPDATA%\\Nox"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Nox"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mumu",
+      "name": "MuMu Player",
+      "category": "Android Emulator",
+      "publisher": "NetEase",
+      "aliases": [
+        "MuMu"
+      ],
+      "tokens": [
+        "mumu",
+        "netease"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Netease\\MuMuPlayer-12.0",
+        "%ProgramFiles(x86)%\\Netease\\MuMuPlayer-12.0"
+      ],
+      "exe": "MuMuPlayer.exe",
+      "dataPaths": [
+        "%APPDATA%\\Netease",
+        "%LOCALAPPDATA%\\Netease",
+        "%APPDATA%\\Netease\\MuMuPlayer\\data",
+        "%APPDATA%\\Netease\\MuMuPlayerGlobal\\data",
+        "%LOCALAPPDATA%\\Netease\\MuMuPlayer"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Netease\\MuMuPlayer"
+      ],
+      "processNames": [
+        "MuMuPlayer"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "xbox",
+      "name": "Xbox App",
+      "category": "Game Launcher",
+      "publisher": "Microsoft",
+      "aliases": [
+        "Xbox"
+      ],
+      "tokens": [
+        "xbox"
+      ],
+      "installPaths": [],
+      "exe": "XboxPcApp.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Packages\\Microsoft.GamingApp_8wekyb3d8bbwe",
+        "%LOCALAPPDATA%\\XboxGames"
+      ],
+      "registryKeys": [],
+      "processNames": [],
+      "args": "",
+      "notes": "UWP/MSIX Store app - not portable with this method.",
+      "excludes": []
+    },
+    {
+      "id": "glyph",
+      "name": "Glyph",
+      "category": "Game Launcher",
+      "publisher": "Trion Worlds",
+      "aliases": [
+        "Trion Worlds"
+      ],
+      "tokens": [
+        "glyph",
+        "trion"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Glyph",
+        "%ProgramFiles%\\Glyph"
+      ],
+      "exe": "Glyph.exe",
+      "dataPaths": [
+        "%APPDATA%\\Glyph",
+        "%LOCALAPPDATA%\\Glyph"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Glyph"
+      ],
+      "processNames": [
+        "Glyph"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "category": "Browser",
+      "publisher": "Google",
+      "aliases": [
+        "Chrome"
+      ],
+      "tokens": [
+        "chrome",
+        "google"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Google\\Chrome\\Application",
+        "%ProgramFiles(x86)%\\Google\\Chrome\\Application",
+        "%LOCALAPPDATA%\\Google\\Chrome\\Application"
+      ],
+      "exe": "chrome.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Google\\Chrome"
+      ],
+      "processNames": [
+        "chrome"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "category": "Browser",
+      "publisher": "Mozilla",
+      "aliases": [
+        "Firefox"
+      ],
+      "tokens": [
+        "firefox",
+        "mozilla"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Mozilla Firefox",
+        "%ProgramFiles(x86)%\\Mozilla Firefox",
+        "%LOCALAPPDATA%\\Mozilla Firefox"
+      ],
+      "exe": "firefox.exe",
+      "dataPaths": [
+        "%APPDATA%\\Mozilla\\Firefox",
+        "%LOCALAPPDATA%\\Mozilla\\Firefox"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Mozilla"
+      ],
+      "processNames": [
+        "firefox"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "category": "Browser",
+      "publisher": "Brave",
+      "aliases": [
+        "Brave Browser"
+      ],
+      "tokens": [
+        "brave"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\BraveSoftware\\Brave-Browser\\Application",
+        "%ProgramFiles(x86)%\\BraveSoftware\\Brave-Browser\\Application",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\Application"
+      ],
+      "exe": "brave.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\BraveSoftware"
+      ],
+      "processNames": [
+        "brave"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "opera",
+      "name": "Opera",
+      "category": "Browser",
+      "publisher": "Opera",
+      "aliases": [
+        "Opera GX"
+      ],
+      "tokens": [
+        "opera"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Opera",
+        "%ProgramFiles%\\Opera",
+        "%ProgramFiles(x86)%\\Opera"
+      ],
+      "exe": "opera.exe",
+      "dataPaths": [
+        "%APPDATA%\\Opera Software",
+        "%LOCALAPPDATA%\\Opera Software"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Opera Software"
+      ],
+      "processNames": [
+        "opera"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi",
+      "category": "Browser",
+      "publisher": "Vivaldi",
+      "aliases": [
+        "Vivaldi Browser"
+      ],
+      "tokens": [
+        "vivaldi"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Vivaldi\\Application",
+        "%ProgramFiles%\\Vivaldi\\Application"
+      ],
+      "exe": "vivaldi.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Vivaldi\\User Data"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Vivaldi"
+      ],
+      "processNames": [
+        "vivaldi"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "tor",
+      "name": "Tor Browser",
+      "category": "Browser",
+      "publisher": "Tor Project",
+      "aliases": [
+        "Tor"
+      ],
+      "tokens": [
+        "tor",
+        "torproject"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Tor Browser",
+        "%ProgramFiles(x86)%\\Tor Browser",
+        "%LOCALAPPDATA%\\Programs\\Tor Browser"
+      ],
+      "exe": "firefox.exe",
+      "dataPaths": [
+        "%APPDATA%\\Tor Browser",
+        "%LOCALAPPDATA%\\Tor Browser"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\TorProject"
+      ],
+      "processNames": [],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "librewolf",
+      "name": "LibreWolf",
+      "category": "Browser",
+      "publisher": "LibreWolf",
+      "aliases": [
+        "LibreWolf"
+      ],
+      "tokens": [
+        "librewolf"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\LibreWolf",
+        "%LOCALAPPDATA%\\LibreWolf"
+      ],
+      "exe": "librewolf.exe",
+      "dataPaths": [
+        "%APPDATA%\\LibreWolf",
+        "%LOCALAPPDATA%\\LibreWolf"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\LibreWolf"
+      ],
+      "processNames": [
+        "librewolf"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "waterfox",
+      "name": "Waterfox",
+      "category": "Browser",
+      "publisher": "Waterfox",
+      "aliases": [
+        "Waterfox"
+      ],
+      "tokens": [
+        "waterfox"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Waterfox",
+        "%LOCALAPPDATA%\\Waterfox"
+      ],
+      "exe": "waterfox.exe",
+      "dataPaths": [
+        "%APPDATA%\\Waterfox",
+        "%LOCALAPPDATA%\\Waterfox"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Waterfox"
+      ],
+      "processNames": [
+        "waterfox"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "chromium",
+      "name": "Chromium",
+      "category": "Browser",
+      "publisher": "The Chromium Authors",
+      "aliases": [
+        "Chromium"
+      ],
+      "tokens": [
+        "chromium"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Chromium\\Application",
+        "%ProgramFiles%\\Chromium\\Application"
+      ],
+      "exe": "chrome.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Chromium\\User Data"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Chromium"
+      ],
+      "processNames": [
+        "chrome"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "edge",
+      "name": "Microsoft Edge",
+      "category": "Browser",
+      "publisher": "Microsoft",
+      "aliases": [
+        "Edge"
+      ],
+      "tokens": [
+        "edge",
+        "microsoftedge"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Microsoft\\Edge\\Application",
+        "%ProgramFiles%\\Microsoft\\Edge\\Application"
+      ],
+      "exe": "msedge.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\Edge"
+      ],
+      "processNames": [
+        "msedge"
+      ],
+      "args": "",
+      "notes": "System browser; portable copy may not update correctly.",
+      "excludes": []
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "category": "Communication",
+      "publisher": "Discord",
+      "aliases": [
+        "Discord"
+      ],
+      "tokens": [
+        "discord"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Discord",
+        "%LOCALAPPDATA%\\Programs\\Discord"
+      ],
+      "exe": "Discord.exe",
+      "dataPaths": [
+        "%APPDATA%\\discord",
+        "%LOCALAPPDATA%\\Discord"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Discord"
+      ],
+      "processNames": [
+        "Discord"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "Communication",
+      "publisher": "Salesforce",
+      "aliases": [
+        "Slack"
+      ],
+      "tokens": [
+        "slack"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\slack",
+        "%LOCALAPPDATA%\\Programs\\Slack"
+      ],
+      "exe": "slack.exe",
+      "dataPaths": [
+        "%APPDATA%\\Slack",
+        "%LOCALAPPDATA%\\Slack"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Slack"
+      ],
+      "processNames": [
+        "slack"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "teams",
+      "name": "Microsoft Teams",
+      "category": "Communication",
+      "publisher": "Microsoft",
+      "aliases": [
+        "Teams"
+      ],
+      "tokens": [
+        "teams",
+        "microsoftteams"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Microsoft\\Teams",
+        "%LOCALAPPDATA%\\Programs\\Microsoft Teams"
+      ],
+      "exe": "Teams.exe",
+      "dataPaths": [
+        "%APPDATA%\\Microsoft\\Teams",
+        "%LOCALAPPDATA%\\Microsoft\\Teams"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\Teams"
+      ],
+      "processNames": [
+        "Teams"
+      ],
+      "args": "",
+      "notes": "New Teams is MSIX; classic Teams is a normal desktop app.",
+      "excludes": []
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom",
+      "category": "Communication",
+      "publisher": "Zoom",
+      "aliases": [
+        "Zoom Workplace"
+      ],
+      "tokens": [
+        "zoom"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Zoom",
+        "%LOCALAPPDATA%\\Programs\\Zoom"
+      ],
+      "exe": "Zoom.exe",
+      "dataPaths": [
+        "%APPDATA%\\Zoom",
+        "%LOCALAPPDATA%\\Zoom"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Zoom"
+      ],
+      "processNames": [
+        "Zoom"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram Desktop",
+      "category": "Communication",
+      "publisher": "Telegram",
+      "aliases": [
+        "Telegram"
+      ],
+      "tokens": [
+        "telegram"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Telegram Desktop",
+        "%LOCALAPPDATA%\\Programs\\Telegram Desktop"
+      ],
+      "exe": "Telegram.exe",
+      "dataPaths": [
+        "%APPDATA%\\Telegram Desktop",
+        "%LOCALAPPDATA%\\Telegram Desktop"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\TelegramDesktop"
+      ],
+      "processNames": [
+        "Telegram"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "category": "Communication",
+      "publisher": "Meta",
+      "aliases": [
+        "WhatsApp Desktop"
+      ],
+      "tokens": [
+        "whatsapp"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\WhatsApp",
+        "%LOCALAPPDATA%\\Programs\\WhatsApp"
+      ],
+      "exe": "WhatsApp.exe",
+      "dataPaths": [
+        "%APPDATA%\\WhatsApp",
+        "%LOCALAPPDATA%\\WhatsApp"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\WhatsApp"
+      ],
+      "processNames": [
+        "WhatsApp"
+      ],
+      "args": "",
+      "notes": "UWP variants are not portable.",
+      "excludes": []
+    },
+    {
+      "id": "signal",
+      "name": "Signal",
+      "category": "Communication",
+      "publisher": "Signal",
+      "aliases": [
+        "Signal Desktop"
+      ],
+      "tokens": [
+        "signal"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Signal",
+        "%LOCALAPPDATA%\\Signal"
+      ],
+      "exe": "Signal.exe",
+      "dataPaths": [
+        "%APPDATA%\\Signal",
+        "%LOCALAPPDATA%\\Signal"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Signal"
+      ],
+      "processNames": [
+        "Signal"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "skype",
+      "name": "Skype",
+      "category": "Communication",
+      "publisher": "Microsoft",
+      "aliases": [
+        "Skype"
+      ],
+      "tokens": [
+        "skype"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Microsoft\\Skype for Desktop",
+        "%LOCALAPPDATA%\\Programs\\Skype"
+      ],
+      "exe": "Skype.exe",
+      "dataPaths": [
+        "%APPDATA%\\Skype",
+        "%LOCALAPPDATA%\\Skype"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Skype"
+      ],
+      "processNames": [
+        "Skype"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "element",
+      "name": "Element",
+      "category": "Communication",
+      "publisher": "Element",
+      "aliases": [
+        "Element Messenger"
+      ],
+      "tokens": [
+        "element",
+        "matrix"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Element",
+        "%LOCALAPPDATA%\\Element"
+      ],
+      "exe": "element.exe",
+      "dataPaths": [
+        "%APPDATA%\\Element",
+        "%LOCALAPPDATA%\\Element"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Element"
+      ],
+      "processNames": [
+        "element"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mumble",
+      "name": "Mumble",
+      "category": "Communication",
+      "publisher": "Mumble",
+      "aliases": [
+        "Mumble"
+      ],
+      "tokens": [
+        "mumble"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Mumble",
+        "%ProgramFiles(x86)%\\Mumble"
+      ],
+      "exe": "mumble.exe",
+      "dataPaths": [
+        "%APPDATA%\\Mumble",
+        "%LOCALAPPDATA%\\Mumble"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Mumble"
+      ],
+      "processNames": [
+        "mumble"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "teamspeak",
+      "name": "TeamSpeak 3",
+      "category": "Communication",
+      "publisher": "TeamSpeak",
+      "aliases": [
+        "TeamSpeak"
+      ],
+      "tokens": [
+        "teamspeak"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\TeamSpeak 3 Client",
+        "%ProgramFiles(x86)%\\TeamSpeak 3 Client"
+      ],
+      "exe": "ts3client_win64.exe",
+      "dataPaths": [
+        "%APPDATA%\\TS3Client",
+        "%LOCALAPPDATA%\\TS3Client"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\TeamSpeak"
+      ],
+      "processNames": [
+        "ts3client_win64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "vlc",
+      "name": "VLC media player",
+      "category": "Media",
+      "publisher": "VideoLAN",
+      "aliases": [
+        "VLC"
+      ],
+      "tokens": [
+        "vlc",
+        "videolan"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\VideoLAN\\VLC",
+        "%ProgramFiles(x86)%\\VideoLAN\\VLC"
+      ],
+      "exe": "vlc.exe",
+      "dataPaths": [
+        "%APPDATA%\\vlc",
+        "%LOCALAPPDATA%\\vlc"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\VideoLAN"
+      ],
+      "processNames": [
+        "vlc"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mpchc",
+      "name": "MPC-HC",
+      "category": "Media",
+      "publisher": "MPC-HC",
+      "aliases": [
+        "Media Player Classic"
+      ],
+      "tokens": [
+        "mpchc",
+        "mpc-hc"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\MPC-HC",
+        "%ProgramFiles(x86)%\\MPC-HC",
+        "%LOCALAPPDATA%\\MPC-HC"
+      ],
+      "exe": "mpc-hc64.exe",
+      "dataPaths": [
+        "%APPDATA%\\MPC-HC"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\MPC-HC"
+      ],
+      "processNames": [
+        "mpc-hc64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "potplayer",
+      "name": "PotPlayer",
+      "category": "Media",
+      "publisher": "Kakao",
+      "aliases": [
+        "Daum PotPlayer"
+      ],
+      "tokens": [
+        "potplayer",
+        "daum"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\DAUM\\PotPlayer",
+        "%ProgramFiles(x86)%\\DAUM\\PotPlayer"
+      ],
+      "exe": "PotPlayerMini64.exe",
+      "dataPaths": [
+        "%APPDATA%\\PotPlayerMini64",
+        "%LOCALAPPDATA%\\PotPlayerMini64"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\DAUM"
+      ],
+      "processNames": [
+        "PotPlayerMini64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "foobar",
+      "name": "foobar2000",
+      "category": "Media",
+      "publisher": "foobar2000",
+      "aliases": [
+        "foobar2000"
+      ],
+      "tokens": [
+        "foobar"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\foobar2000",
+        "%ProgramFiles(x86)%\\foobar2000",
+        "%LOCALAPPDATA%\\foobar2000"
+      ],
+      "exe": "foobar2000.exe",
+      "dataPaths": [
+        "%APPDATA%\\foobar2000",
+        "%LOCALAPPDATA%\\foobar2000"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\foobar2000"
+      ],
+      "processNames": [
+        "foobar2000"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "Media",
+      "publisher": "Spotify",
+      "aliases": [
+        "Spotify"
+      ],
+      "tokens": [
+        "spotify"
+      ],
+      "installPaths": [
+        "%APPDATA%\\Spotify"
+      ],
+      "exe": "Spotify.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Spotify",
+        "%APPDATA%\\Spotify"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Spotify"
+      ],
+      "processNames": [
+        "Spotify"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "itunes",
+      "name": "iTunes",
+      "category": "Media",
+      "publisher": "Apple",
+      "aliases": [
+        "iTunes"
+      ],
+      "tokens": [
+        "itunes",
+        "apple"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\iTunes",
+        "%ProgramFiles(x86)%\\iTunes"
+      ],
+      "exe": "iTunes.exe",
+      "dataPaths": [
+        "%APPDATA%\\Apple Computer\\iTunes",
+        "%LOCALAPPDATA%\\Apple Computer\\iTunes"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Apple Computer"
+      ],
+      "processNames": [
+        "iTunes"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "category": "Media",
+      "publisher": "Audacity",
+      "aliases": [
+        "Audacity"
+      ],
+      "tokens": [
+        "audacity"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Audacity",
+        "%ProgramFiles(x86)%\\Audacity"
+      ],
+      "exe": "audacity.exe",
+      "dataPaths": [
+        "%APPDATA%\\audacity",
+        "%LOCALAPPDATA%\\audacity"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Audacity"
+      ],
+      "processNames": [
+        "audacity"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "obs",
+      "name": "OBS Studio",
+      "category": "Media",
+      "publisher": "OBS Project",
+      "aliases": [
+        "OBS"
+      ],
+      "tokens": [
+        "obs",
+        "obsstudio"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\obs-studio",
+        "%ProgramFiles(x86)%\\obs-studio"
+      ],
+      "exe": "obs64.exe",
+      "dataPaths": [
+        "%APPDATA%\\obs-studio",
+        "%LOCALAPPDATA%\\obs-studio"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\OBS Studio"
+      ],
+      "processNames": [
+        "obs64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "handbrake",
+      "name": "HandBrake",
+      "category": "Media",
+      "publisher": "HandBrake",
+      "aliases": [
+        "HandBrake"
+      ],
+      "tokens": [
+        "handbrake"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\HandBrake",
+        "%ProgramFiles(x86)%\\HandBrake"
+      ],
+      "exe": "HandBrake.exe",
+      "dataPaths": [
+        "%APPDATA%\\HandBrake"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\HandBrake"
+      ],
+      "processNames": [
+        "HandBrake"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "kodi",
+      "name": "Kodi",
+      "category": "Media",
+      "publisher": "XBMC Foundation",
+      "aliases": [
+        "Kodi"
+      ],
+      "tokens": [
+        "kodi"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Kodi",
+        "%ProgramFiles(x86)%\\Kodi"
+      ],
+      "exe": "kodi.exe",
+      "dataPaths": [
+        "%APPDATA%\\Kodi",
+        "%LOCALAPPDATA%\\Kodi"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Kodi"
+      ],
+      "processNames": [
+        "kodi"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "plex",
+      "name": "Plex Media Server",
+      "category": "Media",
+      "publisher": "Plex",
+      "aliases": [
+        "Plex"
+      ],
+      "tokens": [
+        "plex"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Plex\\Plex Media Server",
+        "%ProgramFiles(x86)%\\Plex\\Plex Media Server"
+      ],
+      "exe": "Plex Media Server.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Plex",
+        "%ProgramData%\\Plex"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Plex"
+      ],
+      "processNames": [
+        "Plex Media Server"
+      ],
+      "args": "",
+      "notes": "Runs as a service; portable server use is limited.",
+      "excludes": []
+    },
+    {
+      "id": "aimp",
+      "name": "AIMP",
+      "category": "Media",
+      "publisher": "AIMP",
+      "aliases": [
+        "AIMP"
+      ],
+      "tokens": [
+        "aimp"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\AIMP",
+        "%ProgramFiles(x86)%\\AIMP"
+      ],
+      "exe": "AIMP.exe",
+      "dataPaths": [
+        "%APPDATA%\\AIMP",
+        "%LOCALAPPDATA%\\AIMP"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\AIMP"
+      ],
+      "processNames": [
+        "AIMP"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "category": "Graphics",
+      "publisher": "GIMP",
+      "aliases": [
+        "GNU Image Manipulation Program"
+      ],
+      "tokens": [
+        "gimp"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\GIMP 3",
+        "%ProgramFiles%\\GIMP 2",
+        "%ProgramFiles(x86)%\\GIMP 2"
+      ],
+      "exe": "gimp-3.0.exe",
+      "dataPaths": [
+        "%APPDATA%\\GIMP",
+        "%LOCALAPPDATA%\\GIMP"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\GIMP"
+      ],
+      "processNames": [
+        "gimp"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "krita",
+      "name": "Krita",
+      "category": "Graphics",
+      "publisher": "KDE",
+      "aliases": [
+        "Krita"
+      ],
+      "tokens": [
+        "krita"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Krita (x64)",
+        "%ProgramFiles%\\Krita",
+        "%ProgramFiles(x86)%\\Krita (x64)"
+      ],
+      "exe": "krita.exe",
+      "dataPaths": [
+        "%APPDATA%\\krita",
+        "%LOCALAPPDATA%\\krita"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Krita"
+      ],
+      "processNames": [
+        "krita"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "inkscape",
+      "name": "Inkscape",
+      "category": "Graphics",
+      "publisher": "Inkscape",
+      "aliases": [
+        "Inkscape"
+      ],
+      "tokens": [
+        "inkscape"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Inkscape",
+        "%ProgramFiles(x86)%\\Inkscape"
+      ],
+      "exe": "inkscape.exe",
+      "dataPaths": [
+        "%APPDATA%\\inkscape",
+        "%LOCALAPPDATA%\\inkscape"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Inkscape"
+      ],
+      "processNames": [
+        "inkscape"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "category": "Graphics",
+      "publisher": "Blender Foundation",
+      "aliases": [
+        "Blender"
+      ],
+      "tokens": [
+        "blender"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Blender Foundation\\Blender 4.5",
+        "%ProgramFiles%\\Blender Foundation\\Blender 4.4",
+        "%ProgramFiles%\\Blender Foundation\\Blender 4.3"
+      ],
+      "exe": "blender.exe",
+      "dataPaths": [
+        "%APPDATA%\\Blender Foundation",
+        "%LOCALAPPDATA%\\Blender Foundation"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Blender Foundation"
+      ],
+      "processNames": [
+        "blender"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "paintnet",
+      "name": "Paint.NET",
+      "category": "Graphics",
+      "publisher": "dotPDN",
+      "aliases": [
+        "Paint.NET"
+      ],
+      "tokens": [
+        "paintnet"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Paint.NET",
+        "%ProgramFiles(x86)%\\Paint.NET"
+      ],
+      "exe": "PaintDotNet.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Paint.NET",
+        "%APPDATA%\\Paint.NET"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Paint.NET"
+      ],
+      "processNames": [
+        "PaintDotNet"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "irfanview",
+      "name": "IrfanView",
+      "category": "Graphics",
+      "publisher": "Irfan Skiljan",
+      "aliases": [
+        "IrfanView"
+      ],
+      "tokens": [
+        "irfanview"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\IrfanView",
+        "%ProgramFiles(x86)%\\IrfanView"
+      ],
+      "exe": "i_view64.exe",
+      "dataPaths": [
+        "%APPDATA%\\IrfanView"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\IrfanView"
+      ],
+      "processNames": [
+        "i_view64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "sharex",
+      "name": "ShareX",
+      "category": "Graphics",
+      "publisher": "ShareX",
+      "aliases": [
+        "ShareX"
+      ],
+      "tokens": [
+        "sharex"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\ShareX",
+        "%ProgramFiles(x86)%\\ShareX",
+        "%LOCALAPPDATA%\\Programs\\ShareX"
+      ],
+      "exe": "ShareX.exe",
+      "dataPaths": [
+        "%APPDATA%\\ShareX",
+        "%LOCALAPPDATA%\\ShareX"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\ShareX"
+      ],
+      "processNames": [
+        "ShareX"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "greenshot",
+      "name": "Greenshot",
+      "category": "Graphics",
+      "publisher": "Greenshot",
+      "aliases": [
+        "Greenshot"
+      ],
+      "tokens": [
+        "greenshot"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Greenshot",
+        "%ProgramFiles(x86)%\\Greenshot"
+      ],
+      "exe": "Greenshot.exe",
+      "dataPaths": [
+        "%APPDATA%\\Greenshot"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Greenshot"
+      ],
+      "processNames": [
+        "Greenshot"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "category": "Development",
+      "publisher": "Microsoft",
+      "aliases": [
+        "VS Code"
+      ],
+      "tokens": [
+        "vscode",
+        "visualstudiocode"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Microsoft VS Code",
+        "%ProgramFiles%\\Microsoft VS Code"
+      ],
+      "exe": "Code.exe",
+      "dataPaths": [
+        "%APPDATA%\\Code",
+        "%LOCALAPPDATA%\\Code",
+        "%USERPROFILE%\\.vscode"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\VSCode"
+      ],
+      "processNames": [
+        "Code"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "visualstudio",
+      "name": "Visual Studio",
+      "category": "Development",
+      "publisher": "Microsoft",
+      "aliases": [
+        "Visual Studio 2022",
+        "Visual Studio 2026",
+        "Visual Studio Insiders"
+      ],
+      "tokens": [
+        "visualstudio",
+        "devenv"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Microsoft Visual Studio\\18\\Insiders",
+        "%ProgramFiles%\\Microsoft Visual Studio\\2022\\Community",
+        "%ProgramFiles%\\Microsoft Visual Studio\\2022\\Professional",
+        "%ProgramFiles%\\Microsoft Visual Studio\\2022\\Enterprise",
+        "%ProgramFiles%\\Microsoft Visual Studio\\2022\\BuildTools",
+        "%ProgramFiles%\\Microsoft Visual Studio",
+        "%ProgramFiles(x86)%\\Microsoft Visual Studio"
+      ],
+      "exe": "devenv.exe",
+      "dataPaths": [
+        "%APPDATA%\\Microsoft\\VisualStudio",
+        "%LOCALAPPDATA%\\Microsoft\\VisualStudio"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\VisualStudio"
+      ],
+      "processNames": [
+        "devenv"
+      ],
+      "args": "",
+      "notes": "Large install; copy mode is slow.",
+      "excludes": []
+    },
+    {
+      "id": "sublime",
+      "name": "Sublime Text",
+      "category": "Development",
+      "publisher": "Sublime HQ",
+      "aliases": [
+        "Sublime"
+      ],
+      "tokens": [
+        "sublime"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Sublime Text",
+        "%ProgramFiles(x86)%\\Sublime Text",
+        "%LOCALAPPDATA%\\Programs\\Sublime Text"
+      ],
+      "exe": "sublime_text.exe",
+      "dataPaths": [
+        "%APPDATA%\\Sublime Text",
+        "%LOCALAPPDATA%\\Sublime Text"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Sublime Text"
+      ],
+      "processNames": [
+        "sublime_text"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "notepadpp",
+      "name": "Notepad++",
+      "category": "Development",
+      "publisher": "Don Ho",
+      "aliases": [
+        "Notepad++"
+      ],
+      "tokens": [
+        "notepadpp"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Notepad++",
+        "%ProgramFiles(x86)%\\Notepad++"
+      ],
+      "exe": "notepad++.exe",
+      "dataPaths": [
+        "%APPDATA%\\Notepad++",
+        "%LOCALAPPDATA%\\Notepad++"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Notepad++"
+      ],
+      "processNames": [
+        "notepad++"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "intellij",
+      "name": "IntelliJ IDEA",
+      "category": "Development",
+      "publisher": "JetBrains",
+      "aliases": [
+        "IntelliJ"
+      ],
+      "tokens": [
+        "intellij",
+        "jetbrains"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\JetBrains\\IntelliJ IDEA 2025.1",
+        "%ProgramFiles%\\JetBrains\\IntelliJ IDEA 2024.3",
+        "%LOCALAPPDATA%\\Programs\\IntelliJ IDEA"
+      ],
+      "exe": "idea64.exe",
+      "dataPaths": [
+        "%APPDATA%\\JetBrains",
+        "%LOCALAPPDATA%\\JetBrains"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\JetBrains"
+      ],
+      "processNames": [
+        "idea64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "pycharm",
+      "name": "PyCharm",
+      "category": "Development",
+      "publisher": "JetBrains",
+      "aliases": [
+        "PyCharm"
+      ],
+      "tokens": [
+        "pycharm",
+        "jetbrains"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\JetBrains\\PyCharm 2025.1",
+        "%ProgramFiles%\\JetBrains\\PyCharm 2024.3",
+        "%LOCALAPPDATA%\\Programs\\PyCharm"
+      ],
+      "exe": "pycharm64.exe",
+      "dataPaths": [
+        "%APPDATA%\\JetBrains",
+        "%LOCALAPPDATA%\\JetBrains"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\JetBrains"
+      ],
+      "processNames": [
+        "pycharm64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "webstorm",
+      "name": "WebStorm",
+      "category": "Development",
+      "publisher": "JetBrains",
+      "aliases": [
+        "WebStorm"
+      ],
+      "tokens": [
+        "webstorm",
+        "jetbrains"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\JetBrains\\WebStorm 2025.1",
+        "%ProgramFiles%\\JetBrains\\WebStorm 2024.3",
+        "%LOCALAPPDATA%\\Programs\\WebStorm"
+      ],
+      "exe": "webstorm64.exe",
+      "dataPaths": [
+        "%APPDATA%\\JetBrains",
+        "%LOCALAPPDATA%\\JetBrains"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\JetBrains"
+      ],
+      "processNames": [
+        "webstorm64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "git",
+      "name": "Git for Windows",
+      "category": "Development",
+      "publisher": "Git",
+      "aliases": [
+        "Git"
+      ],
+      "tokens": [
+        "git",
+        "gitforwindows"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Git",
+        "%ProgramFiles(x86)%\\Git",
+        "%LOCALAPPDATA%\\Programs\\Git"
+      ],
+      "exe": "git.exe",
+      "dataPaths": [
+        "%APPDATA%\\Git",
+        "%LOCALAPPDATA%\\Git",
+        "%USERPROFILE%\\.gitconfig",
+        "%USERPROFILE%\\.git-credentials"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\GitForWindows"
+      ],
+      "processNames": [
+        "git"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "githubdesktop",
+      "name": "GitHub Desktop",
+      "category": "Development",
+      "publisher": "GitHub",
+      "aliases": [
+        "GitHub Desktop"
+      ],
+      "tokens": [
+        "github"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\GitHubDesktop"
+      ],
+      "exe": "GitHubDesktop.exe",
+      "dataPaths": [
+        "%APPDATA%\\GitHub Desktop",
+        "%LOCALAPPDATA%\\GitHubDesktop"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\GitHub"
+      ],
+      "processNames": [
+        "GitHubDesktop"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "Development",
+      "publisher": "Python Software Foundation",
+      "aliases": [
+        "Python 3"
+      ],
+      "tokens": [
+        "python"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Python\\Python314",
+        "%LOCALAPPDATA%\\Programs\\Python\\Python313",
+        "%LOCALAPPDATA%\\Programs\\Python\\Python312",
+        "%LOCALAPPDATA%\\Programs\\Python",
+        "%ProgramFiles%\\Python314",
+        "%ProgramFiles%\\Python313",
+        "%ProgramFiles%\\Python312"
+      ],
+      "exe": "python.exe",
+      "dataPaths": [
+        "%APPDATA%\\Python",
+        "%LOCALAPPDATA%\\Programs\\Python"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Python"
+      ],
+      "processNames": [
+        "python"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "Development",
+      "publisher": "OpenJS Foundation",
+      "aliases": [
+        "Node"
+      ],
+      "tokens": [
+        "nodejs",
+        "node"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\nodejs",
+        "%ProgramFiles(x86)%\\nodejs",
+        "%LOCALAPPDATA%\\Programs\\nodejs"
+      ],
+      "exe": "node.exe",
+      "dataPaths": [
+        "%APPDATA%\\npm",
+        "%LOCALAPPDATA%\\npm-cache"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\nodejs"
+      ],
+      "processNames": [
+        "node"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "docker",
+      "name": "Docker Desktop",
+      "category": "Development",
+      "publisher": "Docker",
+      "aliases": [
+        "Docker"
+      ],
+      "tokens": [
+        "docker"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Docker\\Docker"
+      ],
+      "exe": "Docker Desktop.exe",
+      "dataPaths": [
+        "%APPDATA%\\Docker",
+        "%LOCALAPPDATA%\\Docker",
+        "%ProgramData%\\Docker"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Docker Inc."
+      ],
+      "processNames": [
+        "Docker Desktop"
+      ],
+      "args": "",
+      "notes": "Requires WSL/Hyper-V; not truly portable.",
+      "excludes": []
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "category": "Development",
+      "publisher": "Postman",
+      "aliases": [
+        "Postman"
+      ],
+      "tokens": [
+        "postman"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Postman"
+      ],
+      "exe": "Postman.exe",
+      "dataPaths": [
+        "%APPDATA%\\Postman",
+        "%LOCALAPPDATA%\\Postman"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Postman"
+      ],
+      "processNames": [
+        "Postman"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "insomnia",
+      "name": "Insomnia",
+      "category": "Development",
+      "publisher": "Kong",
+      "aliases": [
+        "Insomnia"
+      ],
+      "tokens": [
+        "insomnia"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Insomnia",
+        "%LOCALAPPDATA%\\Insomnia"
+      ],
+      "exe": "Insomnia.exe",
+      "dataPaths": [
+        "%APPDATA%\\Insomnia",
+        "%LOCALAPPDATA%\\Insomnia"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Insomnia"
+      ],
+      "processNames": [
+        "Insomnia"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "dbeaver",
+      "name": "DBeaver",
+      "category": "Development",
+      "publisher": "DBeaver",
+      "aliases": [
+        "DBeaver"
+      ],
+      "tokens": [
+        "dbeaver"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\DBeaver",
+        "%ProgramFiles(x86)%\\DBeaver",
+        "%LOCALAPPDATA%\\DBeaver"
+      ],
+      "exe": "dbeaver.exe",
+      "dataPaths": [
+        "%APPDATA%\\DBeaver",
+        "%LOCALAPPDATA%\\DBeaver"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\DBeaver"
+      ],
+      "processNames": [
+        "dbeaver"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "winscp",
+      "name": "WinSCP",
+      "category": "Development",
+      "publisher": "Martin Prikryl",
+      "aliases": [
+        "WinSCP"
+      ],
+      "tokens": [
+        "winscp"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\WinSCP",
+        "%ProgramFiles(x86)%\\WinSCP"
+      ],
+      "exe": "WinSCP.exe",
+      "dataPaths": [
+        "%APPDATA%\\WinSCP",
+        "%LOCALAPPDATA%\\WinSCP"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Martin Prikryl"
+      ],
+      "processNames": [
+        "WinSCP"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "putty",
+      "name": "PuTTY",
+      "category": "Development",
+      "publisher": "Simon Tatham",
+      "aliases": [
+        "PuTTY"
+      ],
+      "tokens": [
+        "putty"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\PuTTY",
+        "%ProgramFiles(x86)%\\PuTTY"
+      ],
+      "exe": "putty.exe",
+      "dataPaths": [],
+      "registryKeys": [
+        "HKCU\\Software\\SimonTatham",
+        "HKCU\\Software\\SimonTatham\\PuTTY",
+        "HKCU\\Software\\SimonTatham\\PuTTY\\Sessions",
+        "HKCU\\Software\\SimonTatham\\PuTTY\\SshHostKeys"
+      ],
+      "processNames": [
+        "putty"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "filezilla",
+      "name": "FileZilla",
+      "category": "Development",
+      "publisher": "FileZilla",
+      "aliases": [
+        "FileZilla Client"
+      ],
+      "tokens": [
+        "filezilla"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\FileZilla FTP Client",
+        "%ProgramFiles(x86)%\\FileZilla FTP Client"
+      ],
+      "exe": "filezilla.exe",
+      "dataPaths": [
+        "%APPDATA%\\FileZilla",
+        "%LOCALAPPDATA%\\FileZilla"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\FileZilla"
+      ],
+      "processNames": [
+        "filezilla"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "heidisql",
+      "name": "HeidiSQL",
+      "category": "Development",
+      "publisher": "HeidiSQL",
+      "aliases": [
+        "HeidiSQL"
+      ],
+      "tokens": [
+        "heidisql"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\HeidiSQL",
+        "%ProgramFiles(x86)%\\HeidiSQL"
+      ],
+      "exe": "heidisql.exe",
+      "dataPaths": [
+        "%APPDATA%\\HeidiSQL"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\HeidiSQL"
+      ],
+      "processNames": [
+        "heidisql"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "androidstudio",
+      "name": "Android Studio",
+      "category": "Development",
+      "publisher": "Google",
+      "aliases": [
+        "Android Studio"
+      ],
+      "tokens": [
+        "androidstudio"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Android\\Android Studio",
+        "%LOCALAPPDATA%\\Programs\\Android Studio"
+      ],
+      "exe": "studio64.exe",
+      "dataPaths": [
+        "%APPDATA%\\Google\\AndroidStudio",
+        "%LOCALAPPDATA%\\Google\\AndroidStudio"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Google\\AndroidStudio"
+      ],
+      "processNames": [
+        "studio64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "7zip",
+      "name": "7-Zip",
+      "category": "Utility",
+      "publisher": "Igor Pavlov",
+      "aliases": [
+        "7-Zip"
+      ],
+      "tokens": [
+        "7zip"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\7-Zip",
+        "%ProgramFiles(x86)%\\7-Zip"
+      ],
+      "exe": "7zFM.exe",
+      "dataPaths": [],
+      "registryKeys": [
+        "HKCU\\Software\\7-Zip",
+        "HKLM\\SOFTWARE\\7-Zip",
+        "HKLM\\SOFTWARE\\WOW6432Node\\7-Zip"
+      ],
+      "processNames": [
+        "7zFM"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "winrar",
+      "name": "WinRAR",
+      "category": "Utility",
+      "publisher": "RARLAB",
+      "aliases": [
+        "WinRAR"
+      ],
+      "tokens": [
+        "winrar"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\WinRAR",
+        "%ProgramFiles(x86)%\\WinRAR"
+      ],
+      "exe": "WinRAR.exe",
+      "dataPaths": [
+        "%APPDATA%\\WinRAR"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\WinRAR"
+      ],
+      "processNames": [
+        "WinRAR"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "everything",
+      "name": "Everything",
+      "category": "Utility",
+      "publisher": "voidtools",
+      "aliases": [
+        "Everything Search"
+      ],
+      "tokens": [
+        "everything",
+        "voidtools"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Everything",
+        "%ProgramFiles(x86)%\\Everything"
+      ],
+      "exe": "Everything.exe",
+      "dataPaths": [
+        "%APPDATA%\\Everything"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\voidtools"
+      ],
+      "processNames": [
+        "Everything"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "powertoys",
+      "name": "Microsoft PowerToys",
+      "category": "Utility",
+      "publisher": "Microsoft",
+      "aliases": [
+        "PowerToys"
+      ],
+      "tokens": [
+        "powertoys"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\PowerToys",
+        "%ProgramFiles(x86)%\\PowerToys",
+        "%LOCALAPPDATA%\\PowerToys"
+      ],
+      "exe": "PowerToys.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Microsoft\\PowerToys",
+        "%APPDATA%\\Microsoft\\\\PowerToys"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\PowerToys"
+      ],
+      "processNames": [
+        "PowerToys"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "autohotkey",
+      "name": "AutoHotkey",
+      "category": "Utility",
+      "publisher": "AutoHotkey",
+      "aliases": [
+        "AHK"
+      ],
+      "tokens": [
+        "autohotkey"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\AutoHotkey",
+        "%ProgramFiles(x86)%\\AutoHotkey"
+      ],
+      "exe": "AutoHotkey.exe",
+      "dataPaths": [
+        "%APPDATA%\\AutoHotkey"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\AutoHotkey"
+      ],
+      "processNames": [
+        "AutoHotkey"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden",
+      "category": "Utility",
+      "publisher": "Bitwarden",
+      "aliases": [
+        "Bitwarden"
+      ],
+      "tokens": [
+        "bitwarden"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Bitwarden",
+        "%LOCALAPPDATA%\\Bitwarden"
+      ],
+      "exe": "Bitwarden.exe",
+      "dataPaths": [
+        "%APPDATA%\\Bitwarden",
+        "%LOCALAPPDATA%\\Bitwarden"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Bitwarden"
+      ],
+      "processNames": [
+        "Bitwarden"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "keepass",
+      "name": "KeePass",
+      "category": "Utility",
+      "publisher": "Dominik Reichl",
+      "aliases": [
+        "KeePass Password Safe"
+      ],
+      "tokens": [
+        "keepass"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\KeePass Password Safe 2",
+        "%ProgramFiles(x86)%\\KeePass Password Safe 2"
+      ],
+      "exe": "KeePass.exe",
+      "dataPaths": [
+        "%APPDATA%\\KeePass"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\KeePass"
+      ],
+      "processNames": [
+        "KeePass"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "category": "Utility",
+      "publisher": "qBittorrent",
+      "aliases": [
+        "qBittorrent"
+      ],
+      "tokens": [
+        "qbittorrent"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\qBittorrent",
+        "%ProgramFiles(x86)%\\qBittorrent"
+      ],
+      "exe": "qbittorrent.exe",
+      "dataPaths": [
+        "%APPDATA%\\qBittorrent",
+        "%LOCALAPPDATA%\\qBittorrent"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\qBittorrent"
+      ],
+      "processNames": [
+        "qbittorrent"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "transmission",
+      "name": "Transmission",
+      "category": "Utility",
+      "publisher": "Transmission",
+      "aliases": [
+        "Transmission"
+      ],
+      "tokens": [
+        "transmission"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Transmission",
+        "%ProgramFiles(x86)%\\Transmission"
+      ],
+      "exe": "transmission-qt.exe",
+      "dataPaths": [
+        "%APPDATA%\\Transmission"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "transmission-qt"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "deluge",
+      "name": "Deluge",
+      "category": "Utility",
+      "publisher": "Deluge",
+      "aliases": [
+        "Deluge"
+      ],
+      "tokens": [
+        "deluge"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Deluge",
+        "%ProgramFiles(x86)%\\Deluge"
+      ],
+      "exe": "deluge.exe",
+      "dataPaths": [
+        "%APPDATA%\\deluge"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "deluge"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "anydesk",
+      "name": "AnyDesk",
+      "category": "Utility",
+      "publisher": "AnyDesk",
+      "aliases": [
+        "AnyDesk"
+      ],
+      "tokens": [
+        "anydesk"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\AnyDesk",
+        "%ProgramFiles(x86)%\\AnyDesk"
+      ],
+      "exe": "AnyDesk.exe",
+      "dataPaths": [
+        "%APPDATA%\\AnyDesk",
+        "%ProgramData%\\AnyDesk"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\AnyDesk"
+      ],
+      "processNames": [
+        "AnyDesk"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "teamviewer",
+      "name": "TeamViewer",
+      "category": "Utility",
+      "publisher": "TeamViewer",
+      "aliases": [
+        "TeamViewer"
+      ],
+      "tokens": [
+        "teamviewer"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\TeamViewer",
+        "%ProgramFiles(x86)%\\TeamViewer"
+      ],
+      "exe": "TeamViewer.exe",
+      "dataPaths": [
+        "%APPDATA%\\TeamViewer",
+        "%ProgramData%\\TeamViewer"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\TeamViewer"
+      ],
+      "processNames": [
+        "TeamViewer"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "rustdesk",
+      "name": "RustDesk",
+      "category": "Utility",
+      "publisher": "RustDesk",
+      "aliases": [
+        "RustDesk"
+      ],
+      "tokens": [
+        "rustdesk"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\RustDesk",
+        "%ProgramFiles(x86)%\\RustDesk"
+      ],
+      "exe": "rustdesk.exe",
+      "dataPaths": [
+        "%APPDATA%\\RustDesk",
+        "%LOCALAPPDATA%\\RustDesk"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\RustDesk"
+      ],
+      "processNames": [
+        "rustdesk"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "parsec",
+      "name": "Parsec",
+      "category": "Utility",
+      "publisher": "Parsec",
+      "aliases": [
+        "Parsec"
+      ],
+      "tokens": [
+        "parsec"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Parsec",
+        "%ProgramFiles%\\Parsec"
+      ],
+      "exe": "parsecd.exe",
+      "dataPaths": [
+        "%APPDATA%\\Parsec",
+        "%LOCALAPPDATA%\\Parsec"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Parsec"
+      ],
+      "processNames": [
+        "parsecd"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "moonlight",
+      "name": "Moonlight",
+      "category": "Utility",
+      "publisher": "Moonlight",
+      "aliases": [
+        "Moonlight Game Streaming"
+      ],
+      "tokens": [
+        "moonlight"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Moonlight",
+        "%ProgramFiles(x86)%\\Moonlight",
+        "%LOCALAPPDATA%\\Programs\\Moonlight"
+      ],
+      "exe": "Moonlight.exe",
+      "dataPaths": [
+        "%APPDATA%\\Moonlight"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Moonlight"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "crystaldiskinfo",
+      "name": "CrystalDiskInfo",
+      "category": "Utility",
+      "publisher": "Crystal Dew World",
+      "aliases": [
+        "CrystalDiskInfo"
+      ],
+      "tokens": [
+        "crystaldiskinfo"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\CrystalDiskInfo",
+        "%ProgramFiles(x86)%\\CrystalDiskInfo"
+      ],
+      "exe": "DiskInfo64.exe",
+      "dataPaths": [
+        "%APPDATA%\\CrystalDiskInfo"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\CrystalDiskInfo"
+      ],
+      "processNames": [
+        "DiskInfo64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "hwinfo",
+      "name": "HWiNFO",
+      "category": "Utility",
+      "publisher": "Martin Malik",
+      "aliases": [
+        "HWiNFO64"
+      ],
+      "tokens": [
+        "hwinfo"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\HWiNFO64",
+        "%ProgramFiles(x86)%\\HWiNFO64"
+      ],
+      "exe": "HWiNFO64.exe",
+      "dataPaths": [
+        "%APPDATA%\\HWiNFO64"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\HWiNFO64"
+      ],
+      "processNames": [
+        "HWiNFO64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "cpuz",
+      "name": "CPU-Z",
+      "category": "Utility",
+      "publisher": "CPUID",
+      "aliases": [
+        "CPU-Z"
+      ],
+      "tokens": [
+        "cpuz",
+        "cpuid"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\CPUID\\CPU-Z",
+        "%ProgramFiles(x86)%\\CPUID\\CPU-Z"
+      ],
+      "exe": "cpuz_x64.exe",
+      "dataPaths": [
+        "%APPDATA%\\CPUID"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\CPUID"
+      ],
+      "processNames": [
+        "cpuz_x64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gpuz",
+      "name": "GPU-Z",
+      "category": "Utility",
+      "publisher": "TechPowerUp",
+      "aliases": [
+        "GPU-Z"
+      ],
+      "tokens": [
+        "gpuz"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\GPU-Z",
+        "%ProgramFiles(x86)%\\GPU-Z"
+      ],
+      "exe": "GPU-Z.exe",
+      "dataPaths": [
+        "%APPDATA%\\GPU-Z"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\GPU-Z"
+      ],
+      "processNames": [
+        "GPU-Z"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "rufus",
+      "name": "Rufus",
+      "category": "Utility",
+      "publisher": "Akeo",
+      "aliases": [
+        "Rufus"
+      ],
+      "tokens": [
+        "rufus"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Rufus",
+        "%ProgramFiles(x86)%\\Rufus"
+      ],
+      "exe": "rufus.exe",
+      "dataPaths": [
+        "%APPDATA%\\Rufus"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "rufus"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "ventoy",
+      "name": "Ventoy",
+      "category": "Utility",
+      "publisher": "Ventoy",
+      "aliases": [
+        "Ventoy"
+      ],
+      "tokens": [
+        "ventoy"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Ventoy",
+        "%ProgramFiles(x86)%\\Ventoy"
+      ],
+      "exe": "Ventoy2Disk.exe",
+      "dataPaths": [
+        "%APPDATA%\\Ventoy"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Ventoy2Disk"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "etcher",
+      "name": "balenaEtcher",
+      "category": "Utility",
+      "publisher": "balena",
+      "aliases": [
+        "Etcher"
+      ],
+      "tokens": [
+        "etcher",
+        "balena"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\balena-etcher",
+        "%ProgramFiles%\\balenaEtcher"
+      ],
+      "exe": "balenaEtcher.exe",
+      "dataPaths": [
+        "%APPDATA%\\balenaEtcher",
+        "%LOCALAPPDATA%\\balenaEtcher"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "balenaEtcher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "category": "Utility",
+      "publisher": "Wireshark",
+      "aliases": [
+        "Wireshark"
+      ],
+      "tokens": [
+        "wireshark"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Wireshark",
+        "%ProgramFiles(x86)%\\Wireshark"
+      ],
+      "exe": "Wireshark.exe",
+      "dataPaths": [
+        "%APPDATA%\\Wireshark",
+        "%LOCALAPPDATA%\\Wireshark"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Wireshark"
+      ],
+      "processNames": [
+        "Wireshark"
+      ],
+      "args": "",
+      "notes": "Needs Npcap driver; not portable.",
+      "excludes": []
+    },
+    {
+      "id": "nmap",
+      "name": "Nmap",
+      "category": "Utility",
+      "publisher": "Nmap",
+      "aliases": [
+        "Zenmap"
+      ],
+      "tokens": [
+        "nmap",
+        "zenmap"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Nmap",
+        "%ProgramFiles(x86)%\\Nmap"
+      ],
+      "exe": "nmap.exe",
+      "dataPaths": [
+        "%APPDATA%\\Nmap"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Nmap"
+      ],
+      "processNames": [
+        "nmap"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "ccleaner",
+      "name": "CCleaner",
+      "category": "Utility",
+      "publisher": "Piriform",
+      "aliases": [
+        "CCleaner"
+      ],
+      "tokens": [
+        "ccleaner"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\CCleaner",
+        "%ProgramFiles(x86)%\\CCleaner"
+      ],
+      "exe": "CCleaner64.exe",
+      "dataPaths": [
+        "%APPDATA%\\CCleaner",
+        "%LOCALAPPDATA%\\CCleaner"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Piriform"
+      ],
+      "processNames": [
+        "CCleaner64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "revo",
+      "name": "Revo Uninstaller",
+      "category": "Utility",
+      "publisher": "VS Revo Group",
+      "aliases": [
+        "Revo"
+      ],
+      "tokens": [
+        "revo"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\VS Revo Group\\Revo Uninstaller",
+        "%ProgramFiles(x86)%\\VS Revo Group\\Revo Uninstaller"
+      ],
+      "exe": "RevoUninPro.exe",
+      "dataPaths": [
+        "%APPDATA%\\VS Revo Group"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\VS Revo Group"
+      ],
+      "processNames": [
+        "RevoUninPro"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "treesize",
+      "name": "TreeSize Free",
+      "category": "Utility",
+      "publisher": "JAM Software",
+      "aliases": [
+        "TreeSize"
+      ],
+      "tokens": [
+        "treesize"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\JAM Software\\TreeSize Free",
+        "%ProgramFiles(x86)%\\JAM Software\\TreeSize Free"
+      ],
+      "exe": "TreeSizeFree.exe",
+      "dataPaths": [
+        "%APPDATA%\\JAM Software"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\JAM Software"
+      ],
+      "processNames": [
+        "TreeSizeFree"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "windirstat",
+      "name": "WinDirStat",
+      "category": "Utility",
+      "publisher": "WinDirStat",
+      "aliases": [
+        "WinDirStat"
+      ],
+      "tokens": [
+        "windirstat"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\WinDirStat",
+        "%ProgramFiles(x86)%\\WinDirStat"
+      ],
+      "exe": "windirstat.exe",
+      "dataPaths": [
+        "%APPDATA%\\WinDirStat"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "windirstat"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "procexp",
+      "name": "Process Explorer",
+      "category": "Utility",
+      "publisher": "Microsoft",
+      "aliases": [
+        "Sysinternals Process Explorer"
+      ],
+      "tokens": [
+        "procexp",
+        "sysinternals"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\SysinternalsSuite",
+        "%ProgramFiles(x86)%\\SysinternalsSuite"
+      ],
+      "exe": "procexp64.exe",
+      "dataPaths": [],
+      "registryKeys": [
+        "HKCU\\Software\\Sysinternals",
+        "HKCU\\Software\\Sysinternals\\Process Explorer"
+      ],
+      "processNames": [
+        "procexp64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "msiafterburner",
+      "name": "MSI Afterburner",
+      "category": "Utility",
+      "publisher": "MSI",
+      "aliases": [
+        "Afterburner"
+      ],
+      "tokens": [
+        "afterburner",
+        "msi"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\MSI Afterburner",
+        "%ProgramFiles(x86)%\\MSI Afterburner"
+      ],
+      "exe": "MSIAfterburner.exe",
+      "dataPaths": [
+        "%APPDATA%\\MSI Afterburner"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\MSI"
+      ],
+      "processNames": [
+        "MSIAfterburner"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "rtss",
+      "name": "RivaTuner Statistics Server",
+      "category": "Utility",
+      "publisher": "Guru3D",
+      "aliases": [
+        "RTSS"
+      ],
+      "tokens": [
+        "rtss",
+        "rivatuner"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\RivaTuner Statistics Server",
+        "%ProgramFiles(x86)%\\RivaTuner Statistics Server"
+      ],
+      "exe": "RTSS.exe",
+      "dataPaths": [
+        "%APPDATA%\\RTSS"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\RTSS"
+      ],
+      "processNames": [
+        "RTSS"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "lghub",
+      "name": "Logitech G HUB",
+      "category": "Utility",
+      "publisher": "Logitech",
+      "aliases": [
+        "G HUB",
+        "Logitech G HUB"
+      ],
+      "tokens": [
+        "lghub",
+        "logitech"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\LGHUB",
+        "%ProgramFiles(x86)%\\LGHUB",
+        "%ProgramFiles%\\LGHUB\\system_tray",
+        "%ProgramFiles%\\Logitech",
+        "%ProgramFiles%\\Logi"
+      ],
+      "exe": "lghub.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\LGHUB",
+        "%APPDATA%\\LGHUB",
+        "%APPDATA%\\lghub",
+        "%APPDATA%\\G HUB",
+        "%PROGRAMDATA%\\LGHUB",
+        "%PROGRAMDATA%\\LGHUBData",
+        "%PROGRAMDATA%\\Logishrd",
+        "%PROGRAMDATA%\\Logi"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Logitech"
+      ],
+      "processNames": [
+        "lghub"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "razer",
+      "name": "Razer Synapse",
+      "category": "Utility",
+      "publisher": "Razer",
+      "aliases": [
+        "Razer Synapse 4"
+      ],
+      "tokens": [
+        "razer"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Razer\\RazerAppEngine",
+        "%ProgramFiles(x86)%\\Razer"
+      ],
+      "exe": "RazerAppEngine.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Razer",
+        "%ProgramData%\\Razer"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Razer",
+        "HKLM\\SOFTWARE\\WOW6432Node\\Razer"
+      ],
+      "processNames": [
+        "RazerAppEngine"
+      ],
+      "args": "",
+      "notes": "Needs services.",
+      "excludes": []
+    },
+    {
+      "id": "icue",
+      "name": "Corsair iCUE",
+      "category": "Utility",
+      "publisher": "Corsair",
+      "aliases": [
+        "iCUE"
+      ],
+      "tokens": [
+        "icue",
+        "corsair"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Corsair\\CORSAIR iCUE5 Software",
+        "%ProgramFiles(x86)%\\Corsair\\CORSAIR iCUE5 Software"
+      ],
+      "exe": "iCUE.exe",
+      "dataPaths": [
+        "%APPDATA%\\Corsair",
+        "%LOCALAPPDATA%\\Corsair"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Corsair"
+      ],
+      "processNames": [
+        "iCUE"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "steelseriesgg",
+      "name": "SteelSeries GG",
+      "category": "Utility",
+      "publisher": "SteelSeries",
+      "aliases": [
+        "SteelSeries Engine",
+        "GG"
+      ],
+      "tokens": [
+        "steelseries"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\SteelSeries\\GG",
+        "%ProgramFiles(x86)%\\SteelSeries\\GG"
+      ],
+      "exe": "SteelSeriesGG.exe",
+      "dataPaths": [
+        "%APPDATA%\\SteelSeries",
+        "%LOCALAPPDATA%\\SteelSeries"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\SteelSeries"
+      ],
+      "processNames": [
+        "SteelSeriesGG"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "openrgb",
+      "name": "OpenRGB",
+      "category": "Utility",
+      "publisher": "OpenRGB",
+      "aliases": [
+        "OpenRGB"
+      ],
+      "tokens": [
+        "openrgb"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\OpenRGB",
+        "%ProgramFiles(x86)%\\OpenRGB"
+      ],
+      "exe": "OpenRGB.exe",
+      "dataPaths": [
+        "%APPDATA%\\OpenRGB"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "OpenRGB"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "voicemeeter",
+      "name": "Voicemeeter",
+      "category": "Utility",
+      "publisher": "VB-Audio",
+      "aliases": [
+        "VB-Audio Voicemeeter"
+      ],
+      "tokens": [
+        "voicemeeter",
+        "vbaudio"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\VB\\Voicemeeter",
+        "%ProgramFiles(x86)%\\VB\\Voicemeeter"
+      ],
+      "exe": "Voicemeeter8x64.exe",
+      "dataPaths": [
+        "%APPDATA%\\VB-Audio"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\VB-Audio"
+      ],
+      "processNames": [
+        "Voicemeeter8x64"
+      ],
+      "args": "",
+      "notes": "Virtual audio driver; not portable.",
+      "excludes": []
+    },
+    {
+      "id": "equalizerapo",
+      "name": "Equalizer APO",
+      "category": "Utility",
+      "publisher": "Equalizer APO",
+      "aliases": [
+        "EqualizerAPO"
+      ],
+      "tokens": [
+        "equalizerapo"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\EqualizerAPO",
+        "%ProgramFiles(x86)%\\EqualizerAPO"
+      ],
+      "exe": "Editor.exe",
+      "dataPaths": [],
+      "registryKeys": [],
+      "processNames": [],
+      "args": "",
+      "notes": "Audio driver; not portable.",
+      "excludes": []
+    },
+    {
+      "id": "streamlabs",
+      "name": "Streamlabs Desktop",
+      "category": "Utility",
+      "publisher": "Streamlabs",
+      "aliases": [
+        "Streamlabs OBS"
+      ],
+      "tokens": [
+        "streamlabs"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Streamlabs Desktop",
+        "%ProgramFiles%\\Streamlabs Desktop"
+      ],
+      "exe": "Streamlabs Desktop.exe",
+      "dataPaths": [
+        "%APPDATA%\\Streamlabs",
+        "%LOCALAPPDATA%\\Streamlabs"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Streamlabs"
+      ],
+      "processNames": [
+        "Streamlabs Desktop"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "streamdeck",
+      "name": "Elgato Stream Deck",
+      "category": "Utility",
+      "publisher": "Elgato",
+      "aliases": [
+        "Stream Deck"
+      ],
+      "tokens": [
+        "streamdeck",
+        "elgato"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Elgato\\StreamDeck",
+        "%ProgramFiles%\\Elgato\\StreamDeck"
+      ],
+      "exe": "StreamDeck.exe",
+      "dataPaths": [
+        "%APPDATA%\\Elgato",
+        "%LOCALAPPDATA%\\Elgato"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Elgato"
+      ],
+      "processNames": [
+        "StreamDeck"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "wallpaperengine",
+      "name": "Wallpaper Engine",
+      "category": "Utility",
+      "publisher": "Wallpaper Engine",
+      "aliases": [
+        "Wallpaper Engine"
+      ],
+      "tokens": [
+        "wallpaperengine"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Wallpaper Engine",
+        "%ProgramFiles(x86)%\\Wallpaper Engine"
+      ],
+      "exe": "wallpaper64.exe",
+      "dataPaths": [],
+      "registryKeys": [],
+      "processNames": [
+        "wallpaper64"
+      ],
+      "args": "",
+      "notes": "Steam app; needs Steam.",
+      "excludes": [
+        "projects"
+      ]
+    },
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "category": "Game Launcher",
+      "publisher": "Roblox",
+      "aliases": [
+        "Roblox Player"
+      ],
+      "tokens": [
+        "roblox"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Roblox",
+        "%ProgramFiles(x86)%\\Roblox",
+        "%ProgramFiles%\\Roblox"
+      ],
+      "exe": "RobloxPlayerBeta.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Roblox",
+        "%APPDATA%\\Roblox",
+        "%USERPROFILE%\\Roblox"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Roblox",
+        "HKCU\\Software\\ROBLOX Corporation"
+      ],
+      "processNames": [
+        "RobloxPlayerBeta"
+      ],
+      "args": "",
+      "notes": "Uses versioned folders; run once before building.",
+      "excludes": []
+    },
+    {
+      "id": "robloxstudio",
+      "name": "Roblox Studio",
+      "category": "Game Development",
+      "publisher": "Roblox",
+      "aliases": [
+        "Roblox Studio"
+      ],
+      "tokens": [
+        "robloxstudio"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Roblox",
+        "%ProgramFiles(x86)%\\Roblox"
+      ],
+      "exe": "RobloxStudioBeta.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Roblox"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Roblox"
+      ],
+      "processNames": [
+        "RobloxStudioBeta"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft Launcher",
+      "category": "Game Launcher",
+      "publisher": "Mojang",
+      "aliases": [
+        "Minecraft"
+      ],
+      "tokens": [
+        "minecraft",
+        "mojang"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Minecraft Launcher",
+        "%ProgramFiles%\\Minecraft Launcher",
+        "%LOCALAPPDATA%\\Programs\\Minecraft Launcher"
+      ],
+      "exe": "MinecraftLauncher.exe",
+      "dataPaths": [
+        "%APPDATA%\\.minecraft",
+        "%USERPROFILE%\\.minecraft"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Mojang",
+        "HKCU\\Software\\Minecraft"
+      ],
+      "processNames": [
+        "MinecraftLauncher"
+      ],
+      "args": "",
+      "notes": "Microsoft Store version is MSIX.",
+      "excludes": []
+    },
+    {
+      "id": "prismlauncher",
+      "name": "Prism Launcher",
+      "category": "Game Launcher",
+      "publisher": "Prism Launcher",
+      "aliases": [
+        "Prism Launcher"
+      ],
+      "tokens": [
+        "prismlauncher"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\PrismLauncher",
+        "%ProgramFiles%\\PrismLauncher"
+      ],
+      "exe": "prismlauncher.exe",
+      "dataPaths": [
+        "%APPDATA%\\PrismLauncher"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\PrismLauncher"
+      ],
+      "processNames": [
+        "prismlauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "multimc",
+      "name": "MultiMC",
+      "category": "Game Launcher",
+      "publisher": "MultiMC",
+      "aliases": [
+        "MultiMC"
+      ],
+      "tokens": [
+        "multimc"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\MultiMC",
+        "%ProgramFiles%\\MultiMC"
+      ],
+      "exe": "MultiMC.exe",
+      "dataPaths": [
+        "%APPDATA%\\MultiMC"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\MultiMC"
+      ],
+      "processNames": [
+        "MultiMC"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "atlauncher",
+      "name": "ATLauncher",
+      "category": "Game Launcher",
+      "publisher": "ATLauncher",
+      "aliases": [
+        "ATLauncher"
+      ],
+      "tokens": [
+        "atlauncher"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\ATLauncher",
+        "%ProgramFiles%\\ATLauncher",
+        "%APPDATA%\\ATLauncher"
+      ],
+      "exe": "ATLauncher.exe",
+      "dataPaths": [
+        "%APPDATA%\\ATLauncher",
+        "%APPDATA%\\.atlauncher"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "ATLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "curseforge",
+      "name": "CurseForge",
+      "category": "Game Launcher",
+      "publisher": "Overwolf",
+      "aliases": [
+        "CurseForge App"
+      ],
+      "tokens": [
+        "curseforge"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\CurseForge",
+        "%ProgramFiles%\\CurseForge"
+      ],
+      "exe": "CurseForge.exe",
+      "dataPaths": [
+        "%APPDATA%\\CurseForge",
+        "%LOCALAPPDATA%\\CurseForge"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\CurseForge"
+      ],
+      "processNames": [
+        "CurseForge"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "modrinth",
+      "name": "Modrinth App",
+      "category": "Game Launcher",
+      "publisher": "Modrinth",
+      "aliases": [
+        "Modrinth"
+      ],
+      "tokens": [
+        "modrinth"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Modrinth App",
+        "%ProgramFiles%\\Modrinth App"
+      ],
+      "exe": "Modrinth App.exe",
+      "dataPaths": [
+        "%APPDATA%\\ModrinthApp",
+        "%LOCALAPPDATA%\\ModrinthApp"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Modrinth App"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gdlauncher",
+      "name": "GDLauncher",
+      "category": "Game Launcher",
+      "publisher": "GDLauncher",
+      "aliases": [
+        "GDLauncher"
+      ],
+      "tokens": [
+        "gdlauncher"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\GDLauncher",
+        "%ProgramFiles%\\GDLauncher"
+      ],
+      "exe": "GDLauncher.exe",
+      "dataPaths": [
+        "%APPDATA%\\GDLauncher",
+        "%LOCALAPPDATA%\\gdlauncher"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "GDLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "lunarclient",
+      "name": "Lunar Client",
+      "category": "Game Launcher",
+      "publisher": "Lunar Client",
+      "aliases": [
+        "Lunar"
+      ],
+      "tokens": [
+        "lunarclient",
+        "lunar"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Lunar Client",
+        "%ProgramFiles%\\Lunar Client",
+        "%LOCALAPPDATA%\\Programs\\lunarclient"
+      ],
+      "exe": "Lunar Client.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.lunarclient",
+        "%APPDATA%\\.lunarclient",
+        "%APPDATA%\\lunarclient"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Lunar Client"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "badlion",
+      "name": "Badlion Client",
+      "category": "Game Launcher",
+      "publisher": "Badlion",
+      "aliases": [
+        "Badlion"
+      ],
+      "tokens": [
+        "badlion"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Badlion Client",
+        "%ProgramFiles%\\Badlion Client"
+      ],
+      "exe": "Badlion Client.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.badlion",
+        "%APPDATA%\\.badlion"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Badlion Client"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "feather",
+      "name": "Feather Client",
+      "category": "Game Launcher",
+      "publisher": "Feather",
+      "aliases": [
+        "Feather"
+      ],
+      "tokens": [
+        "feather"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Feather",
+        "%ProgramFiles%\\Feather"
+      ],
+      "exe": "Feather.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.feather",
+        "%APPDATA%\\.feather"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Feather"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "tlauncher",
+      "name": "TLauncher",
+      "category": "Game Launcher",
+      "publisher": "TLauncher",
+      "aliases": [
+        "TLauncher"
+      ],
+      "tokens": [
+        "tlauncher"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\TLauncher",
+        "%ProgramFiles%\\TLauncher"
+      ],
+      "exe": "TLauncher.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.tlauncher",
+        "%APPDATA%\\.tlauncher"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "TLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "sklauncher",
+      "name": "SKLauncher",
+      "category": "Game Launcher",
+      "publisher": "SKLauncher",
+      "aliases": [
+        "SKLauncher"
+      ],
+      "tokens": [
+        "sklauncher"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\SKLauncher",
+        "%ProgramFiles%\\SKLauncher"
+      ],
+      "exe": "SKLauncher.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.sklauncher",
+        "%APPDATA%\\.sklauncher"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "SKLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "jagex",
+      "name": "Jagex Launcher",
+      "category": "Game Launcher",
+      "publisher": "Jagex",
+      "aliases": [
+        "RuneScape",
+        "Old School RuneScape"
+      ],
+      "tokens": [
+        "jagex",
+        "runescape"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Jagex\\Jagex Launcher",
+        "%ProgramFiles%\\Jagex\\Jagex Launcher"
+      ],
+      "exe": "JagexLauncher.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Jagex",
+        "%USERPROFILE%\\.runescape"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Jagex"
+      ],
+      "processNames": [
+        "JagexLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "runelite",
+      "name": "RuneLite",
+      "category": "Game Launcher",
+      "publisher": "RuneLite",
+      "aliases": [
+        "RuneLite"
+      ],
+      "tokens": [
+        "runelite"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\RuneLite",
+        "%ProgramFiles%\\RuneLite"
+      ],
+      "exe": "RuneLite.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.runelite"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "RuneLite"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "humble",
+      "name": "Humble App",
+      "category": "Game Launcher",
+      "publisher": "Humble Bundle",
+      "aliases": [
+        "Humble Bundle"
+      ],
+      "tokens": [
+        "humble"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Humble App",
+        "%ProgramFiles%\\Humble App"
+      ],
+      "exe": "Humble App.exe",
+      "dataPaths": [
+        "%APPDATA%\\Humble App",
+        "%LOCALAPPDATA%\\Humble App",
+        "%LOCALAPPDATA%\\humble-client-updater",
+        "%ProgramData%\\HumbleGames"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Humble App"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "dmm",
+      "name": "DMM Game Player",
+      "category": "Game Launcher",
+      "publisher": "DMM",
+      "aliases": [
+        "DMM"
+      ],
+      "tokens": [
+        "dmmgameplayer"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\DMMGamePlayer",
+        "%ProgramFiles%\\DMMGamePlayer"
+      ],
+      "exe": "DMMGamePlayer.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\DMMGamePlayer"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "DMMGamePlayer"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "qooapp",
+      "name": "QooApp",
+      "category": "Game Launcher",
+      "publisher": "QooApp",
+      "aliases": [
+        "QooApp"
+      ],
+      "tokens": [
+        "qooapp"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\QooApp",
+        "%ProgramFiles%\\QooApp"
+      ],
+      "exe": "QooApp.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\QooApp"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "QooApp"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "taptap",
+      "name": "TapTap",
+      "category": "Game Launcher",
+      "publisher": "TapTap",
+      "aliases": [
+        "TapTap"
+      ],
+      "tokens": [
+        "taptap"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\TapTap",
+        "%ProgramFiles%\\TapTap"
+      ],
+      "exe": "TapTap.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\TapTap"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "TapTap"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "googleplaygames",
+      "name": "Google Play Games",
+      "category": "Game Launcher",
+      "publisher": "Google",
+      "aliases": [
+        "Google Play Games for PC"
+      ],
+      "tokens": [
+        "googleplaygames"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Google\\Play Games",
+        "%ProgramFiles%\\Google\\Play Games"
+      ],
+      "exe": "GooglePlayGames.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Google\\Play Games"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Google\\Play Games"
+      ],
+      "processNames": [
+        "GooglePlayGames"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "kurogames",
+      "name": "Kuro Games Launcher",
+      "category": "Game Launcher",
+      "publisher": "Kuro Games",
+      "aliases": [
+        "Wuthering Waves"
+      ],
+      "tokens": [
+        "kurogames",
+        "wutheringwaves"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Kuro Games Launcher",
+        "%LOCALAPPDATA%\\Kuro Games Launcher"
+      ],
+      "exe": "KuroGamesLauncher.exe",
+      "dataPaths": [
+        "%APPDATA%\\Kuro Games Launcher",
+        "%LOCALAPPDATA%\\Kuro Games Launcher"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Kuro Games"
+      ],
+      "processNames": [
+        "KuroGamesLauncher"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gamejolt",
+      "name": "Game Jolt",
+      "category": "Game Launcher",
+      "publisher": "Game Jolt",
+      "aliases": [
+        "Game Jolt Client"
+      ],
+      "tokens": [
+        "gamejolt"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Game Jolt",
+        "%ProgramFiles%\\Game Jolt"
+      ],
+      "exe": "GameJolt.exe",
+      "dataPaths": [
+        "%APPDATA%\\Game Jolt",
+        "%LOCALAPPDATA%\\Game Jolt"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "GameJolt"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "kartridge",
+      "name": "Kartridge",
+      "category": "Game Launcher",
+      "publisher": "Kartridge",
+      "aliases": [
+        "Kartridge"
+      ],
+      "tokens": [
+        "kartridge"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Kartridge",
+        "%ProgramFiles%\\Kartridge"
+      ],
+      "exe": "Kartridge.exe",
+      "dataPaths": [
+        "%APPDATA%\\Kartridge",
+        "%LOCALAPPDATA%\\Kartridge"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Kartridge"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "robotcache",
+      "name": "Robot Cache",
+      "category": "Game Launcher",
+      "publisher": "Robot Cache",
+      "aliases": [
+        "RobotCache"
+      ],
+      "tokens": [
+        "robotcache"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Robot Cache",
+        "%ProgramFiles%\\Robot Cache"
+      ],
+      "exe": "RobotCache.exe",
+      "dataPaths": [
+        "%APPDATA%\\Robot Cache",
+        "%LOCALAPPDATA%\\Robot Cache"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "RobotCache"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "razercortex",
+      "name": "Razer Cortex",
+      "category": "Game Utility",
+      "publisher": "Razer",
+      "aliases": [
+        "Cortex"
+      ],
+      "tokens": [
+        "razercortex"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Razer\\Cortex",
+        "%ProgramFiles%\\Razer\\Cortex"
+      ],
+      "exe": "RazerCortex.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Razer\\Cortex"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Razer"
+      ],
+      "processNames": [
+        "RazerCortex"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "overwolf",
+      "name": "Overwolf",
+      "category": "Game Utility",
+      "publisher": "Overwolf",
+      "aliases": [
+        "Overwolf"
+      ],
+      "tokens": [
+        "overwolf"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Overwolf",
+        "%ProgramFiles%\\Overwolf"
+      ],
+      "exe": "Overwolf.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Overwolf",
+        "%APPDATA%\\Overwolf"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Overwolf"
+      ],
+      "processNames": [
+        "Overwolf"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "medal",
+      "name": "Medal",
+      "category": "Game Utility",
+      "publisher": "Medal",
+      "aliases": [
+        "Medal.tv"
+      ],
+      "tokens": [
+        "medal",
+        "medaltv"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Medal",
+        "%ProgramFiles%\\Medal"
+      ],
+      "exe": "Medal.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Medal",
+        "%APPDATA%\\Medal"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Medal"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "outplayed",
+      "name": "Outplayed",
+      "category": "Game Utility",
+      "publisher": "Overwolf",
+      "aliases": [
+        "Outplayed"
+      ],
+      "tokens": [
+        "outplayed"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Outplayed",
+        "%ProgramFiles%\\Outplayed"
+      ],
+      "exe": "Outplayed.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Outplayed",
+        "%APPDATA%\\Outplayed"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Outplayed"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "guilded",
+      "name": "Guilded",
+      "category": "Game Utility",
+      "publisher": "Guilded",
+      "aliases": [
+        "Guilded"
+      ],
+      "tokens": [
+        "guilded"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Guilded",
+        "%LOCALAPPDATA%\\Guilded"
+      ],
+      "exe": "Guilded.exe",
+      "dataPaths": [
+        "%APPDATA%\\Guilded",
+        "%LOCALAPPDATA%\\Guilded"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Guilded"
+      ],
+      "processNames": [
+        "Guilded"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "voicemod",
+      "name": "Voicemod",
+      "category": "Game Utility",
+      "publisher": "Voicemod",
+      "aliases": [
+        "Voicemod"
+      ],
+      "tokens": [
+        "voicemod"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Voicemod",
+        "%ProgramFiles(x86)%\\Voicemod"
+      ],
+      "exe": "Voicemod.exe",
+      "dataPaths": [
+        "%APPDATA%\\Voicemod",
+        "%LOCALAPPDATA%\\Voicemod"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Voicemod"
+      ],
+      "processNames": [
+        "Voicemod"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "nvidiaapp",
+      "name": "NVIDIA App",
+      "category": "Game Utility",
+      "publisher": "NVIDIA",
+      "aliases": [
+        "GeForce Experience",
+        "NVIDIA GeForce"
+      ],
+      "tokens": [
+        "nvidiaapp"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\NVIDIA Corporation\\NVIDIA App",
+        "%ProgramFiles(x86)%\\NVIDIA Corporation\\NVIDIA App"
+      ],
+      "exe": "NVIDIA App.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA App"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\NVIDIA Corporation"
+      ],
+      "processNames": [
+        "NVIDIA App"
+      ],
+      "args": "",
+      "notes": "Driver/overlay integration; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "amdsoftware",
+      "name": "AMD Software",
+      "category": "Game Utility",
+      "publisher": "AMD",
+      "aliases": [
+        "AMD Adrenalin"
+      ],
+      "tokens": [
+        "amdsoftware",
+        "radeonsoftware"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\AMD\\CNext\\CNext",
+        "%ProgramFiles(x86)%\\AMD\\CNext\\CNext"
+      ],
+      "exe": "RadeonSoftware.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\AMD"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\AMD"
+      ],
+      "processNames": [
+        "RadeonSoftware"
+      ],
+      "args": "",
+      "notes": "Driver integration; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "intelarc",
+      "name": "Intel Arc Control",
+      "category": "Game Utility",
+      "publisher": "Intel",
+      "aliases": [
+        "Intel Arc"
+      ],
+      "tokens": [
+        "intelarc"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Intel\\Intel Arc Control",
+        "%ProgramFiles(x86)%\\Intel\\Intel Arc Control"
+      ],
+      "exe": "ArcControl.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Intel"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Intel"
+      ],
+      "processNames": [
+        "ArcControl"
+      ],
+      "args": "",
+      "notes": "Driver integration; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "msicenter",
+      "name": "MSI Center",
+      "category": "Game Utility",
+      "publisher": "MSI",
+      "aliases": [
+        "MSI Center"
+      ],
+      "tokens": [
+        "msicenter"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\MSI\\MSI Center",
+        "%ProgramFiles(x86)%\\MSI\\MSI Center"
+      ],
+      "exe": "MSI Center.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\MSI",
+        "%ProgramData%\\MSI"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\MSI"
+      ],
+      "processNames": [
+        "MSI Center"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "armourycrate",
+      "name": "ASUS Armoury Crate",
+      "category": "Game Utility",
+      "publisher": "ASUS",
+      "aliases": [
+        "Armoury Crate"
+      ],
+      "tokens": [
+        "armourycrate"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\ASUS\\Armoury Crate",
+        "%ProgramFiles(x86)%\\ASUS\\Armoury Crate"
+      ],
+      "exe": "ArmouryCrate.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\ASUS",
+        "%ProgramData%\\ASUS"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\ASUS"
+      ],
+      "processNames": [
+        "ArmouryCrate"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "nzxtcam",
+      "name": "NZXT CAM",
+      "category": "Game Utility",
+      "publisher": "NZXT",
+      "aliases": [
+        "CAM"
+      ],
+      "tokens": [
+        "nzxtcam"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\NZXT CAM",
+        "%ProgramFiles(x86)%\\NZXT CAM"
+      ],
+      "exe": "NZXT CAM.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\NZXT",
+        "%APPDATA%\\NZXT"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\NZXT"
+      ],
+      "processNames": [
+        "NZXT CAM"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gigabytecc",
+      "name": "Gigabyte Control Center",
+      "category": "Game Utility",
+      "publisher": "Gigabyte",
+      "aliases": [
+        "Gigabyte Control Center"
+      ],
+      "tokens": [
+        "gigabytecontrolcenter"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\GIGABYTE\\Control Center",
+        "%ProgramFiles(x86)%\\GIGABYTE\\Control Center"
+      ],
+      "exe": "ControlCenter.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\GIGABYTE",
+        "%ProgramData%\\GIGABYTE"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\GIGABYTE"
+      ],
+      "processNames": [
+        "ControlCenter"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "alienwarecc",
+      "name": "Alienware Command Center",
+      "category": "Game Utility",
+      "publisher": "Dell",
+      "aliases": [
+        "AWCC"
+      ],
+      "tokens": [
+        "alienwarecommandcenter"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Alienware\\Alienware Command Center",
+        "%ProgramFiles(x86)%\\Alienware\\Alienware Command Center"
+      ],
+      "exe": "AWCC.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Alienware",
+        "%ProgramData%\\Alienware"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Alienware"
+      ],
+      "processNames": [
+        "AWCC"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "predatorsense",
+      "name": "PredatorSense",
+      "category": "Game Utility",
+      "publisher": "Acer",
+      "aliases": [
+        "Predator Sense"
+      ],
+      "tokens": [
+        "predatorsense"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Acer\\PredatorSense",
+        "%ProgramFiles(x86)%\\Acer\\PredatorSense"
+      ],
+      "exe": "PredatorSense.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Acer",
+        "%ProgramData%\\Acer"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Acer"
+      ],
+      "processNames": [
+        "PredatorSense"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "legiontoolkit",
+      "name": "Lenovo Legion Toolkit",
+      "category": "Game Utility",
+      "publisher": "Lenovo",
+      "aliases": [
+        "Legion Toolkit"
+      ],
+      "tokens": [
+        "legiontoolkit"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Lenovo\\Legion Toolkit",
+        "%ProgramFiles(x86)%\\Lenovo\\Legion Toolkit"
+      ],
+      "exe": "Lenovo Legion Toolkit.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Lenovo"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Lenovo"
+      ],
+      "processNames": [
+        "Lenovo Legion Toolkit"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "omengaminghub",
+      "name": "OMEN Gaming Hub",
+      "category": "Game Utility",
+      "publisher": "HP",
+      "aliases": [
+        "OMEN"
+      ],
+      "tokens": [
+        "omengaminghub"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\HP\\OMEN Gaming Hub",
+        "%ProgramFiles(x86)%\\HP\\OMEN Gaming Hub"
+      ],
+      "exe": "OMEN Gaming Hub.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\HP",
+        "%ProgramData%\\HP"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\HP"
+      ],
+      "processNames": [
+        "OMEN Gaming Hub"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "signalrgb",
+      "name": "SignalRGB",
+      "category": "Game Utility",
+      "publisher": "WhirlwindFX",
+      "aliases": [
+        "SignalRGB"
+      ],
+      "tokens": [
+        "signalrgb"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\WhirlwindFX\\SignalRgb",
+        "%ProgramFiles(x86)%\\WhirlwindFX\\SignalRgb"
+      ],
+      "exe": "SignalRgb.exe",
+      "dataPaths": [
+        "%APPDATA%\\WhirlwindFX",
+        "%LOCALAPPDATA%\\WhirlwindFX"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\WhirlwindFX"
+      ],
+      "processNames": [
+        "SignalRgb"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "livelywallpaper",
+      "name": "Lively Wallpaper",
+      "category": "Game Utility",
+      "publisher": "rocksdanister",
+      "aliases": [
+        "Lively"
+      ],
+      "tokens": [
+        "livelywallpaper"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Lively Wallpaper",
+        "%ProgramFiles%\\Lively Wallpaper"
+      ],
+      "exe": "Lively.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Lively Wallpaper"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Lively"
+      ],
+      "args": "",
+      "notes": "Store/MSIX variant is not portable.",
+      "excludes": []
+    },
+    {
+      "id": "displayfusion",
+      "name": "DisplayFusion",
+      "category": "Game Utility",
+      "publisher": "Binary Fortress",
+      "aliases": [
+        "DisplayFusion"
+      ],
+      "tokens": [
+        "displayfusion"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Binary Fortress Software\\DisplayFusion",
+        "%ProgramFiles(x86)%\\Binary Fortress Software\\DisplayFusion"
+      ],
+      "exe": "DisplayFusion.exe",
+      "dataPaths": [
+        "%APPDATA%\\DisplayFusion"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Binary Fortress Software"
+      ],
+      "processNames": [
+        "DisplayFusion"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "borderlessgaming",
+      "name": "Borderless Gaming",
+      "category": "Game Utility",
+      "publisher": "Codeusa",
+      "aliases": [
+        "Borderless Gaming"
+      ],
+      "tokens": [
+        "borderlessgaming"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Borderless Gaming",
+        "%ProgramFiles%\\Borderless Gaming",
+        "%LOCALAPPDATA%\\Programs\\Borderless Gaming"
+      ],
+      "exe": "BorderlessGaming.exe",
+      "dataPaths": [
+        "%APPDATA%\\Borderless Gaming"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "BorderlessGaming"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "losslessscaling",
+      "name": "Lossless Scaling",
+      "category": "Game Utility",
+      "publisher": "THS",
+      "aliases": [
+        "Lossless Scaling"
+      ],
+      "tokens": [
+        "losslessscaling"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Lossless Scaling",
+        "%ProgramFiles%\\Lossless Scaling"
+      ],
+      "exe": "LosslessScaling.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Lossless Scaling"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "LosslessScaling"
+      ],
+      "args": "",
+      "notes": "Steam app; needs Steam.",
+      "excludes": []
+    },
+    {
+      "id": "steamlink",
+      "name": "Steam Link",
+      "category": "Game Streaming",
+      "publisher": "Valve",
+      "aliases": [
+        "Steam Link"
+      ],
+      "tokens": [
+        "steamlink"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Steam Link",
+        "%ProgramFiles%\\Steam Link"
+      ],
+      "exe": "steamlink.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Steam Link",
+        "%APPDATA%\\Steam Link"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Valve\\Steam Link"
+      ],
+      "processNames": [
+        "steamlink"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "sunshine",
+      "name": "Sunshine",
+      "category": "Game Streaming",
+      "publisher": "LizardByte",
+      "aliases": [
+        "Sunshine Game Streaming"
+      ],
+      "tokens": [
+        "sunshine"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Sunshine",
+        "%ProgramFiles(x86)%\\Sunshine"
+      ],
+      "exe": "sunshine.exe",
+      "dataPaths": [
+        "%ProgramData%\\Sunshine",
+        "%LOCALAPPDATA%\\Sunshine"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "sunshine"
+      ],
+      "args": "",
+      "notes": "Runs as a service; needs admin.",
+      "excludes": []
+    },
+    {
+      "id": "wtfast",
+      "name": "WTFast",
+      "category": "Game Utility",
+      "publisher": "WTFast",
+      "aliases": [
+        "WTFast"
+      ],
+      "tokens": [
+        "wtfast"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\WTFast",
+        "%ProgramFiles(x86)%\\WTFast"
+      ],
+      "exe": "WTFast.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\WTFast",
+        "%APPDATA%\\WTFast"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "WTFast"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "exitlag",
+      "name": "ExitLag",
+      "category": "Game Utility",
+      "publisher": "ExitLag",
+      "aliases": [
+        "ExitLag"
+      ],
+      "tokens": [
+        "exitlag"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\ExitLag",
+        "%ProgramFiles(x86)%\\ExitLag"
+      ],
+      "exe": "ExitLag.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\ExitLag",
+        "%ProgramData%\\ExitLag"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "ExitLag"
+      ],
+      "args": "",
+      "notes": "Needs a driver/service; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "noping",
+      "name": "NoPing",
+      "category": "Game Utility",
+      "publisher": "NoPing",
+      "aliases": [
+        "NoPing"
+      ],
+      "tokens": [
+        "noping"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\NoPing",
+        "%ProgramFiles(x86)%\\NoPing"
+      ],
+      "exe": "NoPing.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\NoPing"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "NoPing"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "gearup",
+      "name": "GearUP Booster",
+      "category": "Game Utility",
+      "publisher": "GearUP",
+      "aliases": [
+        "GearUP"
+      ],
+      "tokens": [
+        "gearup"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\GearUP Booster",
+        "%ProgramFiles(x86)%\\GearUP Booster"
+      ],
+      "exe": "GearUP.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\GearUP"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "GearUP"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mudfish",
+      "name": "Mudfish",
+      "category": "Game Utility",
+      "publisher": "Mudfish",
+      "aliases": [
+        "Mudfish Cloud VPN"
+      ],
+      "tokens": [
+        "mudfish"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Mudfish",
+        "%ProgramFiles(x86)%\\Mudfish"
+      ],
+      "exe": "mudfish.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Mudfish",
+        "%APPDATA%\\Mudfish"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "mudfish"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "category": "Office",
+      "publisher": "The Document Foundation",
+      "aliases": [
+        "LibreOffice"
+      ],
+      "tokens": [
+        "libreoffice"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\LibreOffice\\program",
+        "%ProgramFiles(x86)%\\LibreOffice\\program"
+      ],
+      "exe": "soffice.exe",
+      "dataPaths": [
+        "%APPDATA%\\LibreOffice"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\LibreOffice"
+      ],
+      "processNames": [
+        "soffice"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "acrobatreader",
+      "name": "Adobe Acrobat Reader",
+      "category": "Office",
+      "publisher": "Adobe",
+      "aliases": [
+        "Acrobat Reader"
+      ],
+      "tokens": [
+        "acrobatreader",
+        "acrord"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Adobe\\Acrobat Reader DC",
+        "%ProgramFiles%\\Adobe\\Acrobat Reader DC"
+      ],
+      "exe": "AcroRd32.exe",
+      "dataPaths": [
+        "%APPDATA%\\Adobe\\Acrobat",
+        "%LOCALAPPDATA%\\Adobe\\Acrobat"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Adobe\\Acrobat Reader"
+      ],
+      "processNames": [
+        "AcroRd32"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "creativecloud",
+      "name": "Adobe Creative Cloud",
+      "category": "Graphics",
+      "publisher": "Adobe",
+      "aliases": [
+        "Creative Cloud"
+      ],
+      "tokens": [
+        "creativecloud"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Adobe\\Adobe Creative Cloud",
+        "%ProgramFiles(x86)%\\Adobe\\Adobe Creative Cloud"
+      ],
+      "exe": "Creative Cloud.exe",
+      "dataPaths": [
+        "%APPDATA%\\Adobe",
+        "%LOCALAPPDATA%\\Adobe"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Adobe"
+      ],
+      "processNames": [
+        "Creative Cloud"
+      ],
+      "args": "",
+      "notes": "Requires Adobe account/services.",
+      "excludes": []
+    },
+    {
+      "id": "photoshop",
+      "name": "Adobe Photoshop",
+      "category": "Graphics",
+      "publisher": "Adobe",
+      "aliases": [
+        "Photoshop"
+      ],
+      "tokens": [
+        "photoshop"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Adobe\\Adobe Photoshop 2025",
+        "%ProgramFiles%\\Adobe\\Adobe Photoshop 2024"
+      ],
+      "exe": "Photoshop.exe",
+      "dataPaths": [
+        "%APPDATA%\\Adobe\\Adobe Photoshop",
+        "%LOCALAPPDATA%\\Adobe\\Adobe Photoshop"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Adobe\\Photoshop"
+      ],
+      "processNames": [
+        "Photoshop"
+      ],
+      "args": "",
+      "notes": "Creative Cloud licensing applies.",
+      "excludes": []
+    },
+    {
+      "id": "davinciresolve",
+      "name": "DaVinci Resolve",
+      "category": "Media",
+      "publisher": "Blackmagic Design",
+      "aliases": [
+        "DaVinci Resolve"
+      ],
+      "tokens": [
+        "davinciresolve"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Blackmagic Design\\DaVinci Resolve",
+        "%ProgramFiles(x86)%\\Blackmagic Design\\DaVinci Resolve"
+      ],
+      "exe": "Resolve.exe",
+      "dataPaths": [
+        "%APPDATA%\\Blackmagic Design",
+        "%LOCALAPPDATA%\\Blackmagic Design"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Blackmagic Design"
+      ],
+      "processNames": [
+        "Resolve"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "capcut",
+      "name": "CapCut",
+      "category": "Media",
+      "publisher": "ByteDance",
+      "aliases": [
+        "CapCut"
+      ],
+      "tokens": [
+        "capcut"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\CapCut",
+        "%ProgramFiles%\\CapCut"
+      ],
+      "exe": "CapCut.exe",
+      "dataPaths": [
+        "%APPDATA%\\CapCut",
+        "%LOCALAPPDATA%\\CapCut"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\CapCut"
+      ],
+      "processNames": [
+        "CapCut"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "category": "Office",
+      "publisher": "Notion",
+      "aliases": [
+        "Notion"
+      ],
+      "tokens": [
+        "notion"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Notion",
+        "%LOCALAPPDATA%\\Notion"
+      ],
+      "exe": "Notion.exe",
+      "dataPaths": [
+        "%APPDATA%\\Notion",
+        "%LOCALAPPDATA%\\Notion"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Notion"
+      ],
+      "processNames": [
+        "Notion"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "category": "Office",
+      "publisher": "Obsidian",
+      "aliases": [
+        "Obsidian"
+      ],
+      "tokens": [
+        "obsidian"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Obsidian",
+        "%LOCALAPPDATA%\\Obsidian"
+      ],
+      "exe": "Obsidian.exe",
+      "dataPaths": [
+        "%APPDATA%\\obsidian",
+        "%LOCALAPPDATA%\\Obsidian"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Obsidian"
+      ],
+      "processNames": [
+        "Obsidian"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "category": "Graphics",
+      "publisher": "Figma",
+      "aliases": [
+        "Figma"
+      ],
+      "tokens": [
+        "figma"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Figma",
+        "%ProgramFiles%\\Figma"
+      ],
+      "exe": "Figma.exe",
+      "dataPaths": [
+        "%APPDATA%\\Figma",
+        "%LOCALAPPDATA%\\Figma"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Figma"
+      ],
+      "processNames": [
+        "Figma"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "category": "Utility",
+      "publisher": "Dropbox",
+      "aliases": [
+        "Dropbox"
+      ],
+      "tokens": [
+        "dropbox"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Dropbox",
+        "%ProgramFiles%\\Dropbox",
+        "%LOCALAPPDATA%\\Dropbox"
+      ],
+      "exe": "Dropbox.exe",
+      "dataPaths": [
+        "%APPDATA%\\Dropbox",
+        "%LOCALAPPDATA%\\Dropbox"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Dropbox"
+      ],
+      "processNames": [
+        "Dropbox"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "googledrive",
+      "name": "Google Drive",
+      "category": "Utility",
+      "publisher": "Google",
+      "aliases": [
+        "Drive for desktop"
+      ],
+      "tokens": [
+        "googledrive",
+        "drivefs"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Google\\Drive File Stream",
+        "%ProgramFiles(x86)%\\Google\\Drive File Stream"
+      ],
+      "exe": "GoogleDriveFS.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Google\\DriveFS"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Google\\DriveFS"
+      ],
+      "processNames": [
+        "GoogleDriveFS"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "onedrive",
+      "name": "Microsoft OneDrive",
+      "category": "Utility",
+      "publisher": "Microsoft",
+      "aliases": [
+        "OneDrive"
+      ],
+      "tokens": [
+        "onedrive"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive",
+        "%ProgramFiles%\\Microsoft OneDrive"
+      ],
+      "exe": "OneDrive.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\OneDrive"
+      ],
+      "processNames": [
+        "OneDrive"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "nordvpn",
+      "name": "NordVPN",
+      "category": "Utility",
+      "publisher": "Nord Security",
+      "aliases": [
+        "NordVPN"
+      ],
+      "tokens": [
+        "nordvpn"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\NordVPN",
+        "%ProgramFiles(x86)%\\NordVPN"
+      ],
+      "exe": "NordVPN.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\NordVPN",
+        "%ProgramData%\\NordVPN"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\NordVPN"
+      ],
+      "processNames": [
+        "NordVPN"
+      ],
+      "args": "",
+      "notes": "Needs a service/TAP driver; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "protonvpn",
+      "name": "Proton VPN",
+      "category": "Utility",
+      "publisher": "Proton",
+      "aliases": [
+        "ProtonVPN"
+      ],
+      "tokens": [
+        "protonvpn"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Proton\\VPN",
+        "%ProgramFiles(x86)%\\Proton\\VPN"
+      ],
+      "exe": "ProtonVPN.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\ProtonVPN",
+        "%ProgramData%\\ProtonVPN"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Proton"
+      ],
+      "processNames": [
+        "ProtonVPN"
+      ],
+      "args": "",
+      "notes": "Needs a service/TAP driver; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "virtualbox",
+      "name": "Oracle VirtualBox",
+      "category": "Utility",
+      "publisher": "Oracle",
+      "aliases": [
+        "VirtualBox"
+      ],
+      "tokens": [
+        "virtualbox"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Oracle\\VirtualBox",
+        "%ProgramFiles(x86)%\\Oracle\\VirtualBox"
+      ],
+      "exe": "VirtualBox.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.VirtualBox",
+        "%APPDATA%\\VirtualBox"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Oracle\\VirtualBox"
+      ],
+      "processNames": [
+        "VirtualBox"
+      ],
+      "args": "",
+      "notes": "Kernel driver; not portable.",
+      "excludes": []
+    },
+    {
+      "id": "vmwareplayer",
+      "name": "VMware Workstation Player",
+      "category": "Utility",
+      "publisher": "VMware",
+      "aliases": [
+        "VMware Player"
+      ],
+      "tokens": [
+        "vmwareplayer",
+        "vmplayer"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\VMware\\VMware Player",
+        "%ProgramFiles%\\VMware\\VMware Player"
+      ],
+      "exe": "vmplayer.exe",
+      "dataPaths": [
+        "%APPDATA%\\VMware"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\VMware"
+      ],
+      "processNames": [
+        "vmplayer"
+      ],
+      "args": "",
+      "notes": "Kernel drivers; not portable.",
+      "excludes": []
+    },
+    {
+      "id": "powershell7",
+      "name": "PowerShell 7",
+      "category": "Development",
+      "publisher": "Microsoft",
+      "aliases": [
+        "PowerShell"
+      ],
+      "tokens": [
+        "powershell7",
+        "pwsh"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\PowerShell\\7",
+        "%ProgramFiles(x86)%\\PowerShell\\7"
+      ],
+      "exe": "pwsh.exe",
+      "dataPaths": [
+        "%APPDATA%\\Microsoft\\PowerShell"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Microsoft\\PowerShell"
+      ],
+      "processNames": [
+        "pwsh"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mobaxterm",
+      "name": "MobaXterm",
+      "category": "Development",
+      "publisher": "Mobatek",
+      "aliases": [
+        "MobaXterm"
+      ],
+      "tokens": [
+        "mobaxterm"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Mobatek\\MobaXterm",
+        "%ProgramFiles%\\Mobatek\\MobaXterm"
+      ],
+      "exe": "MobaXterm.exe",
+      "dataPaths": [
+        "%APPDATA%\\MobaXterm"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Mobatek"
+      ],
+      "processNames": [
+        "MobaXterm"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "burpsuite",
+      "name": "Burp Suite Community",
+      "category": "Development",
+      "publisher": "PortSwigger",
+      "aliases": [
+        "Burp Suite"
+      ],
+      "tokens": [
+        "burpsuite"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\BurpSuiteCommunity",
+        "%ProgramFiles(x86)%\\BurpSuiteCommunity",
+        "%LOCALAPPDATA%\\Programs\\BurpSuiteCommunity"
+      ],
+      "exe": "BurpSuiteCommunity.exe",
+      "dataPaths": [
+        "%APPDATA%\\BurpSuiteCommunity",
+        "%LOCALAPPDATA%\\BurpSuiteCommunity"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\PortSwigger"
+      ],
+      "processNames": [
+        "BurpSuiteCommunity"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "fiddler",
+      "name": "Fiddler",
+      "category": "Development",
+      "publisher": "Telerik",
+      "aliases": [
+        "Fiddler Classic"
+      ],
+      "tokens": [
+        "fiddler"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Fiddler",
+        "%ProgramFiles%\\Fiddler"
+      ],
+      "exe": "Fiddler.exe",
+      "dataPaths": [
+        "%APPDATA%\\Fiddler",
+        "%LOCALAPPDATA%\\Fiddler"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Fiddler"
+      ],
+      "processNames": [
+        "Fiddler"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "affinityphoto",
+      "name": "Affinity Photo",
+      "category": "Graphics",
+      "publisher": "Serif",
+      "aliases": [
+        "Affinity Photo"
+      ],
+      "tokens": [
+        "affinityphoto"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Affinity\\Photo",
+        "%ProgramFiles(x86)%\\Affinity\\Photo"
+      ],
+      "exe": "Photo.exe",
+      "dataPaths": [
+        "%APPDATA%\\Affinity",
+        "%LOCALAPPDATA%\\Affinity"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Affinity"
+      ],
+      "processNames": [
+        "Photo"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "clipstudiopaint",
+      "name": "Clip Studio Paint",
+      "category": "Graphics",
+      "publisher": "CELSYS",
+      "aliases": [
+        "CLIP STUDIO PAINT"
+      ],
+      "tokens": [
+        "clipstudiopaint",
+        "celsys"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\CELSYS\\CLIP STUDIO 1.5",
+        "%ProgramFiles(x86)%\\CELSYS\\CLIP STUDIO 1.5"
+      ],
+      "exe": "CLIPStudioPaint.exe",
+      "dataPaths": [
+        "%APPDATA%\\CELSYS",
+        "%LOCALAPPDATA%\\CELSYS"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\CELSYS"
+      ],
+      "processNames": [
+        "CLIPStudioPaint"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "aseprite",
+      "name": "Aseprite",
+      "category": "Graphics",
+      "publisher": "Igara Studio",
+      "aliases": [
+        "Aseprite"
+      ],
+      "tokens": [
+        "aseprite"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Aseprite",
+        "%ProgramFiles(x86)%\\Aseprite",
+        "%LOCALAPPDATA%\\Programs\\Aseprite"
+      ],
+      "exe": "aseprite.exe",
+      "dataPaths": [
+        "%APPDATA%\\Aseprite"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Aseprite"
+      ],
+      "processNames": [
+        "aseprite"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "reaper",
+      "name": "REAPER",
+      "category": "Media",
+      "publisher": "Cockos",
+      "aliases": [
+        "REAPER"
+      ],
+      "tokens": [
+        "reaper"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\REAPER (x64)",
+        "%ProgramFiles(x86)%\\REAPER"
+      ],
+      "exe": "reaper.exe",
+      "dataPaths": [
+        "%APPDATA%\\REAPER"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\REAPER"
+      ],
+      "processNames": [
+        "reaper"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "flstudio",
+      "name": "FL Studio",
+      "category": "Media",
+      "publisher": "Image-Line",
+      "aliases": [
+        "FL Studio"
+      ],
+      "tokens": [
+        "flstudio",
+        "imageline"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Image-Line\\FL Studio 2024",
+        "%ProgramFiles(x86)%\\Image-Line\\FL Studio 2024"
+      ],
+      "exe": "FL64.exe",
+      "dataPaths": [
+        "%APPDATA%\\Image-Line",
+        "%ProgramData%\\Image-Line"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Image-Line"
+      ],
+      "processNames": [
+        "FL64"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "jdownloader",
+      "name": "JDownloader",
+      "category": "Utility",
+      "publisher": "AppWork",
+      "aliases": [
+        "JDownloader 2"
+      ],
+      "tokens": [
+        "jdownloader"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\JDownloader 2",
+        "%ProgramFiles%\\JDownloader"
+      ],
+      "exe": "JDownloader2.exe",
+      "dataPaths": [
+        "%APPDATA%\\JDownloader 2"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\JDownloader"
+      ],
+      "processNames": [
+        "JDownloader2"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "idm",
+      "name": "Internet Download Manager",
+      "category": "Utility",
+      "publisher": "Tonec",
+      "aliases": [
+        "IDM"
+      ],
+      "tokens": [
+        "internetdownloadmanager"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Internet Download Manager",
+        "%ProgramFiles%\\Internet Download Manager"
+      ],
+      "exe": "IDMan.exe",
+      "dataPaths": [
+        "%APPDATA%\\IDM"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\DownloadManager"
+      ],
+      "processNames": [
+        "IDMan"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "bandizip",
+      "name": "Bandizip",
+      "category": "Utility",
+      "publisher": "Bandisoft",
+      "aliases": [
+        "Bandizip"
+      ],
+      "tokens": [
+        "bandizip"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Bandizip",
+        "%ProgramFiles(x86)%\\Bandizip"
+      ],
+      "exe": "Bandizip.exe",
+      "dataPaths": [
+        "%APPDATA%\\Bandizip"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Bandizip"
+      ],
+      "processNames": [
+        "Bandizip"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "onepassword",
+      "name": "1Password",
+      "category": "Utility",
+      "publisher": "AgileBits",
+      "aliases": [
+        "1Password"
+      ],
+      "tokens": [
+        "1password"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\1Password",
+        "%ProgramFiles%\\1Password"
+      ],
+      "exe": "1Password.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\1Password",
+        "%APPDATA%\\1Password"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\1Password"
+      ],
+      "processNames": [
+        "1Password"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "Development",
+      "publisher": "Anysphere",
+      "aliases": [
+        "Cursor AI"
+      ],
+      "tokens": [
+        "cursor"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\cursor",
+        "%ProgramFiles%\\Cursor"
+      ],
+      "exe": "Cursor.exe",
+      "dataPaths": [
+        "%APPDATA%\\Cursor",
+        "%USERPROFILE%\\.cursor"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Cursor"
+      ],
+      "processNames": [
+        "Cursor"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mongodbcompass",
+      "name": "MongoDB Compass",
+      "category": "Development",
+      "publisher": "MongoDB",
+      "aliases": [
+        "Compass"
+      ],
+      "tokens": [
+        "mongodbcompass"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\MongoDB Compass",
+        "%ProgramFiles%\\MongoDB Compass"
+      ],
+      "exe": "MongoDBCompass.exe",
+      "dataPaths": [
+        "%APPDATA%\\MongoDB Compass"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\MongoDB"
+      ],
+      "processNames": [
+        "MongoDBCompass"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "mysqlworkbench",
+      "name": "MySQL Workbench",
+      "category": "Development",
+      "publisher": "Oracle",
+      "aliases": [
+        "MySQL Workbench"
+      ],
+      "tokens": [
+        "mysqlworkbench"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\MySQL\\MySQL Workbench 8.0",
+        "%ProgramFiles(x86)%\\MySQL\\MySQL Workbench 8.0"
+      ],
+      "exe": "MySQLWorkbench.exe",
+      "dataPaths": [
+        "%APPDATA%\\MySQL"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\MySQL"
+      ],
+      "processNames": [
+        "MySQLWorkbench"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "javajdk",
+      "name": "Java JDK",
+      "category": "Development",
+      "publisher": "Oracle/Eclipse",
+      "aliases": [
+        "JDK",
+        "OpenJDK"
+      ],
+      "tokens": [
+        "javajdk",
+        "openjdk"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Java",
+        "%ProgramFiles(x86)%\\Java",
+        "%ProgramFiles%\\Eclipse Adoptium"
+      ],
+      "exe": "java.exe",
+      "dataPaths": [],
+      "registryKeys": [
+        "HKCU\\Software\\JavaSoft",
+        "HKLM\\SOFTWARE\\JavaSoft",
+        "HKLM\\SOFTWARE\\WOW6432Node\\JavaSoft"
+      ],
+      "processNames": [
+        "java"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "golang",
+      "name": "Go",
+      "category": "Development",
+      "publisher": "Google",
+      "aliases": [
+        "Golang"
+      ],
+      "tokens": [
+        "golang"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Go",
+        "%LOCALAPPDATA%\\Programs\\Go"
+      ],
+      "exe": "go.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\go"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Go"
+      ],
+      "processNames": [
+        "go"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "rustlang",
+      "name": "Rust",
+      "category": "Development",
+      "publisher": "Rust Foundation",
+      "aliases": [
+        "Rust"
+      ],
+      "tokens": [
+        "rustlang",
+        "cargo"
+      ],
+      "installPaths": [
+        "%USERPROFILE%\\.cargo\\bin"
+      ],
+      "exe": "cargo.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.cargo",
+        "%USERPROFILE%\\.rustup"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "cargo"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "deno",
+      "name": "Deno",
+      "category": "Development",
+      "publisher": "Deno",
+      "aliases": [
+        "Deno"
+      ],
+      "tokens": [
+        "deno"
+      ],
+      "installPaths": [
+        "%USERPROFILE%\\.deno\\bin"
+      ],
+      "exe": "deno.exe",
+      "dataPaths": [
+        "%USERPROFILE%\\.deno"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "deno"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "podman",
+      "name": "Podman",
+      "category": "Development",
+      "publisher": "Red Hat",
+      "aliases": [
+        "Podman"
+      ],
+      "tokens": [
+        "podman"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\RedHat\\Podman",
+        "%ProgramFiles(x86)%\\RedHat\\Podman"
+      ],
+      "exe": "podman.exe",
+      "dataPaths": [
+        "%APPDATA%\\containers",
+        "%USERPROFILE%\\.config\\containers"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "podman"
+      ],
+      "args": "",
+      "notes": "Requires WSL/Hyper-V; not truly portable.",
+      "excludes": []
+    },
+    {
+      "id": "geforcenow",
+      "name": "GeForce NOW",
+      "category": "Game Streaming",
+      "publisher": "NVIDIA",
+      "aliases": [
+        "GeForce NOW"
+      ],
+      "tokens": [
+        "geforcenow"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\GeForceNOW",
+        "%ProgramFiles%\\NVIDIA Corporation\\GeForceNOW"
+      ],
+      "exe": "GeForceNOW.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\GeForceNOW"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\NVIDIA Corporation\\GeForceNOW"
+      ],
+      "processNames": [
+        "GeForceNOW"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "steamvr",
+      "name": "SteamVR",
+      "category": "Game Utility",
+      "publisher": "Valve",
+      "aliases": [
+        "SteamVR"
+      ],
+      "tokens": [
+        "steamvr"
+      ],
+      "installPaths": [
+        "%ProgramFiles(x86)%\\Steam\\steamapps\\common\\SteamVR",
+        "%ProgramFiles%\\Steam\\steamapps\\common\\SteamVR"
+      ],
+      "exe": "vrstartup.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\openvr"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Valve\\Steam"
+      ],
+      "processNames": [
+        "vrstartup"
+      ],
+      "args": "",
+      "notes": "Steam app; needs Steam.",
+      "excludes": []
+    },
+    {
+      "id": "oculus",
+      "name": "Meta Quest Link",
+      "category": "Game Utility",
+      "publisher": "Meta",
+      "aliases": [
+        "Oculus",
+        "Meta Quest"
+      ],
+      "tokens": [
+        "oculus",
+        "metaquest"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Oculus\\Support\\oculus-client",
+        "%ProgramFiles%\\Oculus"
+      ],
+      "exe": "OculusClient.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Oculus",
+        "%APPDATA%\\Oculus"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Oculus"
+      ],
+      "processNames": [
+        "OculusClient"
+      ],
+      "args": "",
+      "notes": "Needs Oculus service/driver; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "sidequest",
+      "name": "SideQuest",
+      "category": "Game Utility",
+      "publisher": "SideQuest",
+      "aliases": [
+        "SideQuest"
+      ],
+      "tokens": [
+        "sidequest"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\SideQuest",
+        "%ProgramFiles%\\SideQuest"
+      ],
+      "exe": "SideQuest.exe",
+      "dataPaths": [
+        "%APPDATA%\\SideQuest"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "SideQuest"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "psremoteplay",
+      "name": "PS Remote Play",
+      "category": "Game Streaming",
+      "publisher": "Sony",
+      "aliases": [
+        "PlayStation Remote Play"
+      ],
+      "tokens": [
+        "psremoteplay",
+        "remoteplay"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Sony\\PS Remote Play",
+        "%ProgramFiles(x86)%\\Sony\\PS Remote Play"
+      ],
+      "exe": "RemotePlay.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\Sony\\PS Remote Play"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Sony\\PS Remote Play"
+      ],
+      "processNames": [
+        "RemotePlay"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "chiaki",
+      "name": "Chiaki",
+      "category": "Game Streaming",
+      "publisher": "Chiaki",
+      "aliases": [
+        "Chiaki"
+      ],
+      "tokens": [
+        "chiaki"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Chiaki",
+        "%ProgramFiles%\\Chiaki"
+      ],
+      "exe": "chiaki.exe",
+      "dataPaths": [
+        "%APPDATA%\\Chiaki"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "chiaki"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "wemod",
+      "name": "WeMod",
+      "category": "Game Utility",
+      "publisher": "WeMod",
+      "aliases": [
+        "WeMod"
+      ],
+      "tokens": [
+        "wemod"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\WeMod",
+        "%ProgramFiles%\\WeMod"
+      ],
+      "exe": "WeMod.exe",
+      "dataPaths": [
+        "%APPDATA%\\WeMod",
+        "%LOCALAPPDATA%\\WeMod"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\WeMod"
+      ],
+      "processNames": [
+        "WeMod"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "cheatengine",
+      "name": "Cheat Engine",
+      "category": "Game Utility",
+      "publisher": "Cheat Engine",
+      "aliases": [
+        "Cheat Engine"
+      ],
+      "tokens": [
+        "cheatengine"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Cheat Engine 7.5",
+        "%ProgramFiles(x86)%\\Cheat Engine 7.5"
+      ],
+      "exe": "cheatengine-x86_64.exe",
+      "dataPaths": [
+        "%APPDATA%\\Cheat Engine"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\Cheat Engine"
+      ],
+      "processNames": [
+        "cheatengine-x86_64"
+      ],
+      "args": "",
+      "notes": "Use only with games you are allowed to modify.",
+      "excludes": []
+    },
+    {
+      "id": "ds4windows",
+      "name": "DS4Windows",
+      "category": "Game Utility",
+      "publisher": "DS4Windows",
+      "aliases": [
+        "DS4Windows"
+      ],
+      "tokens": [
+        "ds4windows"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\DS4Windows",
+        "%ProgramFiles%\\DS4Windows"
+      ],
+      "exe": "DS4Windows.exe",
+      "dataPaths": [
+        "%APPDATA%\\DS4Windows"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\DS4Windows"
+      ],
+      "processNames": [
+        "DS4Windows"
+      ],
+      "args": "",
+      "notes": "Controller driver; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "dualsensex",
+      "name": "DualSenseX",
+      "category": "Game Utility",
+      "publisher": "DualSenseX",
+      "aliases": [
+        "DualSenseX"
+      ],
+      "tokens": [
+        "dualsensex"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\DualSenseX",
+        "%ProgramFiles%\\DualSenseX"
+      ],
+      "exe": "DualSenseX.exe",
+      "dataPaths": [
+        "%APPDATA%\\DualSenseX"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "DualSenseX"
+      ],
+      "args": "",
+      "notes": "Controller driver; not fully portable.",
+      "excludes": []
+    },
+    {
+      "id": "joytokey",
+      "name": "JoyToKey",
+      "category": "Game Utility",
+      "publisher": "JoyToKey",
+      "aliases": [
+        "JoyToKey"
+      ],
+      "tokens": [
+        "joytokey"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\JoyToKey",
+        "%ProgramFiles(x86)%\\JoyToKey"
+      ],
+      "exe": "JoyToKey.exe",
+      "dataPaths": [
+        "%APPDATA%\\JoyToKey"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\JoyToKey"
+      ],
+      "processNames": [
+        "JoyToKey"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "antimicrox",
+      "name": "AntiMicroX",
+      "category": "Game Utility",
+      "publisher": "AntiMicroX",
+      "aliases": [
+        "AntiMicroX"
+      ],
+      "tokens": [
+        "antimicrox"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\AntiMicroX",
+        "%ProgramFiles(x86)%\\AntiMicroX"
+      ],
+      "exe": "antimicrox.exe",
+      "dataPaths": [
+        "%APPDATA%\\antimicrox"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "antimicrox"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "x360ce",
+      "name": "x360ce",
+      "category": "Game Utility",
+      "publisher": "x360ce",
+      "aliases": [
+        "x360ce"
+      ],
+      "tokens": [
+        "x360ce"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\x360ce",
+        "%ProgramFiles(x86)%\\x360ce"
+      ],
+      "exe": "x360ce.exe",
+      "dataPaths": [
+        "%ProgramData%\\X360CE\\Settings",
+        "%ProgramData%\\X360CE",
+        "%LOCALAPPDATA%\\Jocys.com\\X360 Controller Emulator"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "x360ce"
+      ],
+      "args": "",
+      "notes": "Controller shim; per-game DLLs.",
+      "excludes": []
+    },
+    {
+      "id": "specialk",
+      "name": "Special K",
+      "category": "Game Utility",
+      "publisher": "Special K",
+      "aliases": [
+        "Special K"
+      ],
+      "tokens": [
+        "specialk"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\Special K",
+        "%ProgramFiles(x86)%\\Special K"
+      ],
+      "exe": "SpecialK.exe",
+      "dataPaths": [
+        "%APPDATA%\\Special K"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "SpecialK"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "dlssswapper",
+      "name": "DLSS Swapper",
+      "category": "Game Utility",
+      "publisher": "beeradmoore",
+      "aliases": [
+        "DLSS Swapper"
+      ],
+      "tokens": [
+        "dlssswapper"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\DLSS Swapper",
+        "%ProgramFiles%\\DLSS Swapper"
+      ],
+      "exe": "DLSS Swapper.exe",
+      "dataPaths": [
+        "%APPDATA%\\DLSS Swapper"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "DLSS Swapper"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "capframex",
+      "name": "CapFrameX",
+      "category": "Game Utility",
+      "publisher": "CapFrameX",
+      "aliases": [
+        "CapFrameX"
+      ],
+      "tokens": [
+        "capframex"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\CapFrameX",
+        "%ProgramFiles(x86)%\\CapFrameX"
+      ],
+      "exe": "CapFrameX.exe",
+      "dataPaths": [
+        "%APPDATA%\\CapFrameX"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\CapFrameX"
+      ],
+      "processNames": [
+        "CapFrameX"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "magpie",
+      "name": "Magpie",
+      "category": "Game Utility",
+      "publisher": "Blinue",
+      "aliases": [
+        "Magpie"
+      ],
+      "tokens": [
+        "magpie"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\Programs\\Magpie",
+        "%ProgramFiles%\\Magpie"
+      ],
+      "exe": "Magpie.exe",
+      "dataPaths": [
+        "%APPDATA%\\Magpie"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "Magpie"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "faceit",
+      "name": "FACEIT",
+      "category": "Game Utility",
+      "publisher": "FACEIT",
+      "aliases": [
+        "FACEIT Client",
+        "FACEIT Anti-Cheat"
+      ],
+      "tokens": [
+        "faceit"
+      ],
+      "installPaths": [
+        "%ProgramFiles%\\FACEIT",
+        "%ProgramFiles(x86)%\\FACEIT",
+        "%LOCALAPPDATA%\\FACEIT"
+      ],
+      "exe": "FACEITClient.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\FACEIT",
+        "%APPDATA%\\FACEIT"
+      ],
+      "registryKeys": [
+        "HKCU\\Software\\FACEIT",
+        "HKLM\\SOFTWARE\\WOW6432Node\\FACEIT"
+      ],
+      "processNames": [
+        "FACEITClient",
+        "FACEIT"
+      ],
+      "args": "",
+      "notes": "",
+      "excludes": []
+    },
+    {
+      "id": "fivem",
+      "name": "FiveM",
+      "category": "Game Launcher",
+      "publisher": "Cfx.re",
+      "aliases": [
+        "FiveM",
+        "CitizenFX"
+      ],
+      "tokens": [
+        "fivem",
+        "citizenfx"
+      ],
+      "installPaths": [
+        "%LOCALAPPDATA%\\FiveM"
+      ],
+      "exe": "FiveM.exe",
+      "dataPaths": [
+        "%LOCALAPPDATA%\\FiveM",
+        "%APPDATA%\\CitizenFX"
+      ],
+      "registryKeys": [],
+      "processNames": [
+        "FiveM",
+        "FiveM_GTAProcess"
+      ],
+      "args": "",
+      "notes": "FiveM keeps everything under %LOCALAPPDATA%\\FiveM; use FiveM Portable Setup for per-PC sharing.",
+      "excludes": [
+        "FiveM.app\\data",
+        "FiveM.app\\cache"
+      ]
+    }
+  ]
+}
