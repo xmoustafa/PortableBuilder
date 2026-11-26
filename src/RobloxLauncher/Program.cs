@@ -1939,7 +1939,7 @@ namespace RobloxPortable
             if (handle == new IntPtr(-1)) return null;
             try
             {
-                StringBuilder sb = new StringBuilder(1024);
+                StringBuilder sb = new StringBuilder(32768);
                 uint length = GetFinalPathNameByHandle(handle, sb, (uint)sb.Capacity, 0);
                 if (length == 0) return null;
                 string result = sb.ToString();

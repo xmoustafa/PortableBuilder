@@ -2367,12 +2367,12 @@ namespace PortableBuilder
                     return;
                 }
 
-                if (target.StartsWith(@"\\", StringComparison.Ordinal))
+                if (PathUtil.IsNetworkPath(target))
                 {
                     MessageBox.Show(this,
                         "GameLoop must stay on a local folder (D:\\TxGameAssistant).\r\n" +
-                        "A UNC/network target would share Snapshot and Temp between PCs.\r\n\r\n" +
-                        "Use a mapped local drive only if you are sure it is per-PC.",
+                        "A UNC/network path (including a mapped network drive) would share Snapshot and Temp between PCs.\r\n\r\n" +
+                        "Use a local drive only.",
                         "GameLoop Sandbox", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }

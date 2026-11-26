@@ -1558,7 +1558,7 @@ namespace PortableBuilder
                 string outDir = Path.GetFullPath(request.OutputDir);
                 if (PathUtil.IsUnsafeOutput(outDir))
                     throw new InvalidOperationException("Refusing to use an unsafe output folder: " + outDir);
-                if (request.BestJunction && outDir.StartsWith(@"\\", StringComparison.Ordinal))
+                if (request.BestJunction && PathUtil.IsNetworkPath(outDir))
                     throw new InvalidOperationException(
                         "Best + Junction needs a local NTFS output folder, not a network share.\r\n" +
                         "Use Best Portable layout (Symlink) for UNC/share outputs.");
@@ -1846,7 +1846,7 @@ namespace PortableBuilder
                 string outDir = Path.GetFullPath(request.OutputDir);
                 if (PathUtil.IsUnsafeOutput(outDir))
                     throw new InvalidOperationException("Refusing to use an unsafe output folder: " + outDir);
-                if (request.BestJunction && outDir.StartsWith(@"\\", StringComparison.Ordinal))
+                if (request.BestJunction && PathUtil.IsNetworkPath(outDir))
                     throw new InvalidOperationException(
                         "Best + Junction needs a local NTFS output folder, not a network share.\r\n" +
                         "Use Best Portable layout (Symlink) for UNC/share outputs.");
@@ -2056,7 +2056,7 @@ namespace PortableBuilder
                 string outDir = Path.GetFullPath(request.OutputDir);
                 if (PathUtil.IsUnsafeOutput(outDir))
                     throw new InvalidOperationException("Refusing to use an unsafe output folder: " + outDir);
-                if (request.BestJunction && outDir.StartsWith(@"\\", StringComparison.Ordinal))
+                if (request.BestJunction && PathUtil.IsNetworkPath(outDir))
                     throw new InvalidOperationException(
                         "Best + Junction needs a local NTFS output folder, not a network share.\r\n" +
                         "Use Best Portable layout (Symlink) for UNC/share outputs.");
@@ -2064,10 +2064,10 @@ namespace PortableBuilder
                     throw new InvalidOperationException(
                         "Output folder must not overlap the GameLoop source.\r\nSource: " + root + "\r\nOutput: " + outDir);
 
-                if (outDir.StartsWith(@"\\", StringComparison.Ordinal))
+                if (PathUtil.IsNetworkPath(outDir))
                     throw new InvalidOperationException(
                         "GameLoop must be built to a local folder (D:\\TxGameAssistant), not a network share.\r\n" +
-                        "Snapshot and Temp would be shared between PCs if the package lived on a UNC path.");
+                        "Snapshot and Temp would be shared between PCs if the package lived on a network path.");
 
                 if (!string.Equals(outDir.TrimEnd('\\'), @"D:\TxGameAssistant", StringComparison.OrdinalIgnoreCase))
                     log("Note: recommended target folder is D:\\TxGameAssistant. " +
@@ -2194,7 +2194,7 @@ namespace PortableBuilder
                 string outDir = Path.GetFullPath(request.OutputDir);
                 if (PathUtil.IsUnsafeOutput(outDir))
                     throw new InvalidOperationException("Refusing to use an unsafe output folder: " + outDir);
-                if (request.BestJunction && outDir.StartsWith(@"\\", StringComparison.Ordinal))
+                if (request.BestJunction && PathUtil.IsNetworkPath(outDir))
                     throw new InvalidOperationException(
                         "Best + Junction needs a local NTFS output folder, not a network share.\r\n" +
                         "Use Best Portable layout (Symlink) for UNC/share outputs.");
@@ -3456,7 +3456,7 @@ namespace PortableBuilder
                 string outDir = Path.GetFullPath(request.OutputDir);
                 if (PathUtil.IsUnsafeOutput(outDir))
                     throw new InvalidOperationException("Refusing to use an unsafe output folder: " + outDir);
-                if (request.BestJunction && outDir.StartsWith(@"\\", StringComparison.Ordinal))
+                if (request.BestJunction && PathUtil.IsNetworkPath(outDir))
                     throw new InvalidOperationException(
                         "Best + Junction needs a local NTFS output folder, not a network share.\r\n" +
                         "Use Best Portable layout (Symlink) for UNC/share outputs.");
@@ -3669,9 +3669,9 @@ namespace PortableBuilder
                 }
 
                 bool useSymlink = request.ForceSymlink || needsAdmin ||
-                                  (!request.CopyMode && outDir.StartsWith(@"\\", StringComparison.Ordinal));
+                                  (!request.CopyMode && PathUtil.IsNetworkPath(outDir));
                 bool requireAdmin = needsAdmin || request.ForceSymlink ||
-                                    (!request.CopyMode && outDir.StartsWith(@"\\", StringComparison.Ordinal));
+                                    (!request.CopyMode && PathUtil.IsNetworkPath(outDir));
                 if (log != null) log("Link type: " + (useSymlink ? "Symlink" : "Junction"));
 
                 // ---- launcher.ini ----
@@ -4232,6 +4232,23 @@ namespace PortableBuilder
         {
             string full = Path.GetFullPath(path).TrimEnd('\\');
             return full.Length == 2 && full[1] == ':';
+        }
+
+        // True for UNC paths and mapped network drives (Z:\...).
+        public static bool IsNetworkPath(string path)
+        {
+            if (string.IsNullOrEmpty(path)) return false;
+            try
+            {
+                string full = Path.GetFullPath(path);
+                if (full.StartsWith(@"\\", StringComparison.Ordinal)) return true;
+
+                string root = Path.GetPathRoot(full);
+                if (string.IsNullOrEmpty(root)) return false;
+                DriveInfo drive = new DriveInfo(root);
+                return drive.DriveType == DriveType.Network;
+            }
+            catch { return false; }
         }
 
         // Refuse outputs that would overwrite a user/system folder or a parent

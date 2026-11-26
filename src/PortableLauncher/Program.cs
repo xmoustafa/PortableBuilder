@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -1663,7 +1663,7 @@ namespace PortableLauncher
             if (h == new IntPtr(-1)) return null;
             try
             {
-                System.Text.StringBuilder sb = new System.Text.StringBuilder(1024);
+                System.Text.StringBuilder sb = new System.Text.StringBuilder(32768);
                 uint n = GetFinalPathNameByHandle(h, sb, (uint)sb.Capacity, 0);
                 if (n == 0) return null;
                 string result = sb.ToString();

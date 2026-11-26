@@ -80,10 +80,10 @@ namespace GameLoopPortable
                 _root = NormalizeRoot(ini.Get("App", "Root", ""));
                 if (_root.Length == 0) _root = _baseDir;
 
-                if (_root.StartsWith(@"\\", StringComparison.Ordinal))
+                if (_root.StartsWith(@"\\", StringComparison.Ordinal) || IsNetworkPath(_root))
                 {
                     Fail("GameLoop Portable must run from a local folder (for example D:\\TxGameAssistant).\r\n" +
-                         "A network/UNC package would share Snapshot and Temp between PCs.\r\n" +
+                         "UNC paths and mapped network drives would share Snapshot and Temp between PCs.\r\n" +
                          "Copy the package to D:\\TxGameAssistant on each PC.");
                     return 9;
                 }
@@ -1192,7 +1192,7 @@ namespace GameLoopPortable
             if (handle == new IntPtr(-1)) return null;
             try
             {
-                StringBuilder sb = new StringBuilder(1024);
+                StringBuilder sb = new StringBuilder(32768);
                 uint length = GetFinalPathNameByHandle(handle, sb, (uint)sb.Capacity, 0);
                 if (length == 0) return null;
                 string result = sb.ToString();
@@ -1311,6 +1311,20 @@ namespace GameLoopPortable
             }
             catch { }
             return root;
+        }
+
+        private static bool IsNetworkPath(string path)
+        {
+            if (string.IsNullOrEmpty(path)) return false;
+            try
+            {
+                string full = Path.GetFullPath(path);
+                if (full.StartsWith(@"\\", StringComparison.Ordinal)) return true;
+                string root = Path.GetPathRoot(full);
+                if (string.IsNullOrEmpty(root)) return false;
+                return new DriveInfo(root).DriveType == DriveType.Network;
+            }
+            catch { return false; }
         }
 
         private static bool IsElevated()
