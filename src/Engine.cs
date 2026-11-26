@@ -608,7 +608,7 @@ namespace PortableBuilder
                 {
                     if (key == null) return;
 
-                    string leaf = Path.GetFileName(path.Replace('\\', '/'));
+                    string leaf = PathUtil.LastSegment(path);
                     string norm = PathUtil.Normalize(leaf);
 
                     if (depth > 0 && norm.Length > 2 && !PathUtil.IsRegistryContainer(leaf))
@@ -728,6 +728,8 @@ namespace PortableBuilder
                 if (app == null) continue;
                 app.Prepare();
 
+                try
+                {
                 string installPath = null;
                 string source = "";
 
@@ -763,6 +765,13 @@ namespace PortableBuilder
                 DetectedApp detected = Enrich(app, installPath, exePath, index);
                 detected.Source = source;
                 result.Add(detected);
+                }
+                catch (Exception ex)
+                {
+                    // One malformed install/uninstall path must not abort the
+                    // whole scan. Skip that entry and keep detecting the rest.
+                    if (log != null) log("Skipped " + (app.name ?? "app") + ": " + ex.Message);
+                }
             }
 
             result.Sort(delegate(DetectedApp a, DetectedApp b)
@@ -772,7 +781,15 @@ namespace PortableBuilder
                 return string.Compare(a.Name, b.Name, StringComparison.OrdinalIgnoreCase);
             });
 
-            List<DetectedApp> unknown = DetectUnknown(db, index, log);
+            List<DetectedApp> unknown = new List<DetectedApp>();
+            try
+            {
+                unknown = DetectUnknown(db, index, log);
+            }
+            catch (Exception ex)
+            {
+                if (log != null) log("Unknown-app scan skipped: " + ex.Message);
+            }
             if (unknown.Count > 0)
             {
                 if (log != null) log("Detected " + unknown.Count + " additional installed program(s) not in the database.");
@@ -960,7 +977,7 @@ namespace PortableBuilder
             }
 
             // 2) common per-app folders derived from the install folder name
-            string folderName = Path.GetFileName(installPath.TrimEnd('\\'));
+            string folderName = PathUtil.LastSegment(installPath);
             string[] roots =
             {
                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
@@ -1019,7 +1036,7 @@ namespace PortableBuilder
                 foreach (IndexEntry entry in index.Services)
                 {
                     if (MatchesName(app, entry.NormLeaf) || MatchesToken(app, entry.NormLeaf))
-                        services.Add(Path.GetFileName(entry.Path));
+                        services.Add(PathUtil.LastSegment(entry.Path));
                 }
 
                 // uninstall entry for this app
@@ -1155,7 +1172,7 @@ namespace PortableBuilder
             List<string> exes = PathUtil.SafeEnumerateFiles(installPath, ".exe", 4);
             if (exes.Count == 0) return null;
 
-            string preferred = string.IsNullOrEmpty(preferredExe) ? "" : Path.GetFileName(preferredExe);
+            string preferred = string.IsNullOrEmpty(preferredExe) ? "" : PathUtil.LastSegment(preferredExe);
             if (preferred.Length > 0)
             {
                 List<string> exact = new List<string>();
@@ -1445,7 +1462,7 @@ namespace PortableBuilder
             foreach (IndexEntry e in index.Services)
             {
                 if (TextScore(wanted, tokens, e.NormLeaf) >= dataScore)
-                    if (seenSvc.Add(e.Path)) result.Services.Add(Path.GetFileName(e.Path));
+                    if (seenSvc.Add(e.Path)) result.Services.Add(PathUtil.LastSegment(e.Path));
             }
 
             return result;
@@ -4128,6 +4145,17 @@ namespace PortableBuilder
                 if (char.IsLetterOrDigit(c)) sb.Append(char.ToLowerInvariant(c));
             }
             return sb.ToString();
+        }
+
+        // Path.GetFileName throws on registry key/service names that contain
+        // characters such as '*' or '"'. This returns the last segment without
+        // validating it, so detection can keep going.
+        public static string LastSegment(string value)
+        {
+            if (string.IsNullOrEmpty(value)) return "";
+            string text = value.Replace('/', '\\').TrimEnd('\\');
+            int index = text.LastIndexOf('\\');
+            return index >= 0 ? text.Substring(index + 1) : text;
         }
 
         public static List<string> WordTokens(string text)
